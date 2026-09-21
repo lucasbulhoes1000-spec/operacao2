@@ -1,1672 +1,1152 @@
-:root {
-  --black: #100d11;
-  --black-soft: #171318;
-  --black-card: #1d191e;
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-  --cream: #f1ede4;
-  --cream-dark: #e5dfd4;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  --white: #f6f2eb;
-  --dark-text: #201b1e;
+  <title>Operação 50K</title>
 
-  --muted-light: #aaa3a6;
-  --muted-dark: #706a68;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  --line-dark: rgba(255,255,255,.12);
-  --line-light: rgba(32,27,30,.15);
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet"
+  >
 
-  --serif: "Playfair Display", Georgia, serif;
-  --sans: "DM Sans", Arial, sans-serif;
-}
+  <link rel="stylesheet" href="./styles.css">
+</head>
 
+<body>
 
-/* RESET */
+  <!-- HERO -->
+  <section class="hero">
 
-* {
-  box-sizing: border-box;
-}
+    <div class="hero-photo">
+      <img src="./IMG_7032.JPG" alt="Dra. Larissa Bulhões">
+    </div>
 
-html {
-  scroll-behavior: smooth;
-}
+    <div class="hero-overlay"></div>
 
-body {
-  margin: 0;
+    <div class="hero-content">
 
-  overflow-x: hidden;
+      <div class="logo">
+        OPERAÇÃO
+        <span>50K</span>
+      </div>
 
-  background: var(--black);
-  color: var(--white);
+      <div class="hero-copy">
 
-  font-family: var(--sans);
+        <div class="eyebrow">
+          EXCLUSIVO PARA DENTISTAS
+        </div>
 
-  -webkit-font-smoothing: antialiased;
-}
+        <h1>
+          6 meses com a gente ao seu lado,
+          transformando as lentes em uma operação que
+          <em>fatura R$50 mil por mês</em>
+        </h1>
 
-img {
-  display: block;
-  max-width: 100%;
-}
+        <p>
+          Você terá a nossa metodologia, nosso acompanhamento
+          e nossa experiência dedicados à construção da sua operação.
+        </p>
 
-a {
-  color: inherit;
-}
+        <p class="hero-apply">
+          Faça a sua aplicação para a Operação 50K
+          e aguarde nosso time entrar em contato ↓
+        </p>
 
-h1,
-h2,
-h3,
-h4,
-p {
-  margin-top: 0;
-}
+        <a href="#aplicacao" class="button button-light">
+          FAZER APLICAÇÃO
+        </a>
 
-h1,
-h2,
-h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-}
+      </div>
 
-em {
-  font-family: var(--serif);
-  font-weight: 400;
-}
+    </div>
 
-p {
-  line-height: 1.6;
-}
+  </section>
 
 
-/* LAYOUT */
+  <!-- PROBLEMA -->
+  <section class="dark-section problem">
 
-.container {
-  width: min(1080px, calc(100% - 48px));
-  margin: 0 auto;
-}
+    <div class="small-container">
 
-.narrow {
-  width: min(720px, calc(100% - 48px));
-  margin: 0 auto;
-}
+      <h2>
+        Nós vamos resolver juntos o seu problema de
+        <em>faturamento estagnado.</em>
+      </h2>
 
-.section {
-  padding: 105px 0;
-}
+      <p>
+        Você já tem alguns pacientes, já atende
+        e já fatura alguma coisa.
+      </p>
 
-.dark {
-  background: var(--black);
-  color: var(--white);
-}
+      <p>
+        O problema não é falta de paciente.
+        É que mesmo com muito esforço,
+        seu resultado não aumenta todo mês.
+      </p>
 
-.cream {
-  background: var(--cream);
-  color: var(--dark-text);
-}
+      <div class="highlight">
 
-.section-number {
-  display: inline-block;
+        O que separa um mês de
+        <strong>R$20 mil</strong>
+        para um de
+        <strong>R$50 mil</strong>
+        é um método que une
+        <strong>posicionamento, aquisição, comercial e produto</strong>
+        e faz toda a diferença na hora de atrair pacientes
+        de lentes, converter oportunidades
+        e aumentar o valor dos seus casos.
 
-  margin-bottom: 20px;
+      </div>
 
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .18em;
-}
+      <p>
+        São esses ajustes que nós vamos identificar
+        na sua clínica.
+      </p>
 
-.section-number.light {
-  color: #a59da2;
-}
+      <p class="strong">
+        E que vão te fazer recuperar o investimento
+        na Operação 50K com novos casos de lentes.
+      </p>
 
+    </div>
 
-/* BUTTON */
+    <div class="proof-track">
+      <div>RESULTADO</div>
+      <div>DEPOIMENTO</div>
+      <div>CASE DE LENTES</div>
+      <div>PRINT</div>
+      <div>RESULTADO</div>
+    </div>
 
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  </section>
 
-  min-height: 44px;
 
-  padding: 0 25px;
+  <!-- JORNADA -->
+  <section class="dark-wrapper">
 
-  border-radius: 999px;
+    <div class="journey">
 
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .08em;
+      <div class="mini-logo">O50K</div>
 
-  text-decoration: none;
+      <h2>
+        Os seus próximos
+        <em>6 meses</em>
+        serão assim
+      </h2>
 
-  transition:
-    transform .2s ease,
-    opacity .2s ease;
-}
+      <div class="timeline">
 
-.button:hover {
-  transform: translateY(-2px);
-  opacity: .9;
-}
+        <div class="timeline-number">01</div>
+
+        <article>
+          <span>POSICIONAMENTO</span>
+          <p>
+            Construa uma marca que faça o paciente
+            desejar realizar lentes com você.
+          </p>
+        </article>
+
+        <div class="line"></div>
+
+        <div class="timeline-number">02</div>
+
+        <article>
+          <span>AQUISIÇÃO</span>
+          <p>
+            Faça mais oportunidades de pacientes
+            de lentes chegarem até você.
+          </p>
+        </article>
+
+        <div class="line"></div>
+
+        <div class="timeline-number">03</div>
+
+        <article>
+          <span>COMERCIAL</span>
+          <p>
+            Transforme as oportunidades que chegam
+            em avaliações e novos casos.
+          </p>
+        </article>
+
+        <div class="line"></div>
+
+        <div class="timeline-number">04</div>
+
+        <article class="timeline-dark">
+          <span>PRODUTO</span>
+          <p>
+            Evolua seus casos e aumente
+            o valor percebido do seu trabalho.
+          </p>
+        </article>
+
+      </div>
+
+      <p class="journey-footer">
+        Tudo isso com a gente ao seu lado.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACOMPANHAMENTO -->
+  <section class="dark-section accompaniment">
+
+    <div class="editorial-photo duo-photo">
+      <img
+        src="./WhatsApp Image 2026-09-21 at 17.53.01.jpeg"
+        alt="Larissa e Lucas"
+      >
+    </div>
+
+    <div class="content-container">
+
+      <h2>
+        Para cada etapa,
+        <em>você tem o que precisa.</em>
+      </h2>
+
+      <p class="subtitle">
+        E em todas elas, você terá alguém ao seu lado.
+      </p>
+
+      <div class="accordion-grid">
+
+        <details>
+          <summary>
+            Call de Onboarding + Estratégia Personalizada
+            <span>+</span>
+          </summary>
+          <p>
+            Começamos entendendo sua clínica,
+            seus números, seus casos e sua estrutura atual.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            12 Mentorias Quinzenais
+            <span>+</span>
+          </summary>
+          <p>
+            Encontros com Larissa e Lucas ao longo dos seis meses
+            para direcionamento dos quatro pilares.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            6 Calls Individuais de Implementação
+            <span>+</span>
+          </summary>
+          <p>
+            Encontros individuais para analisar,
+            ajustar e implementar as estratégias
+            dentro da sua clínica.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Grupo VIP de Acompanhamento
+            <span>+</span>
+          </summary>
+          <p>
+            Acompanhamento durante os seis meses
+            para dúvidas, direcionamentos e execução.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Método Bulhões
+            <span>+</span>
+          </summary>
+          <p>
+            A metodologia clínica utilizada diariamente
+            nos casos de lentes.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Método CPM
+            <span>+</span>
+          </summary>
+          <p>
+            Estratégia aplicada à construção
+            e crescimento da operação.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Swipe File Operação 50K
+            <span>+</span>
+          </summary>
+          <p>
+            Materiais, estruturas e referências
+            para facilitar sua implementação.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ESTRUTURA -->
+  <section class="dark-section structure">
+
+    <div class="content-container">
+
+      <h2>
+        Toda a estrutura que a sua clínica precisa
+        para <em>chegar aos R$50 mil por mês através das lentes:</em>
+      </h2>
+
+      <div class="structure-list">
+
+        <!-- POSICIONAMENTO -->
+        <details open>
+
+          <summary>
+            <span class="structure-number">01</span>
+            <strong>Posicionamento</strong>
+            <span class="plus">+</span>
+          </summary>
+
+          <div class="structure-content positioning-content">
+
+            <div>
+
+              <h3>
+                Como construir uma presença no Instagram
+                que faça o paciente perceber valor no seu trabalho
+                antes mesmo de falar com você?
+              </h3>
+
+              <p>
+                Vamos trabalhar a construção da sua marca pessoal,
+                organização do perfil, comunicação dos seus diferenciais
+                e uma estratégia de conteúdos baseada em Venda,
+                Educação, Conexão e Desejo.
+              </p>
+
+              <p>
+                Você vai entender o que mostrar,
+                como utilizar seus casos,
+                como construir autoridade e como transformar
+                seu perfil em uma ferramenta capaz de despertar
+                o desejo do paciente pelas suas lentes.
+              </p>
+
+            </div>
+
+            <div class="instagram-mockup">
+              <img
+                src="./WhatsApp Image 2026-09-21 at 17.53.50.jpeg"
+                alt="Instagram Dra. Larissa Bulhões"
+              >
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <!-- AQUISIÇÃO -->
+        <details>
+
+          <summary>
+            <span class="structure-number">02</span>
+            <strong>Aquisição</strong>
+            <span class="plus">+</span>
+          </summary>
+
+          <div class="structure-content">
+
+            <h3>
+              Como fazer novas oportunidades de pacientes
+              de lentes chegarem até você?
+            </h3>
+
+            <p>
+              Vamos estruturar suas estratégias de aquisição,
+              campanhas, anúncios, criativos e ofertas
+              para colocar seu trabalho na frente
+              de mais potenciais pacientes.
+            </p>
+
+            <p>
+              Você vai entender como construir campanhas,
+              analisar seus resultados e identificar
+              o que precisa ser ajustado para aumentar
+              a entrada de novas oportunidades na sua clínica.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <!-- COMERCIAL -->
+        <details>
+
+          <summary>
+            <span class="structure-number">03</span>
+            <strong>Comercial</strong>
+            <span class="plus">+</span>
+          </summary>
+
+          <div class="structure-content">
+
+            <h3>
+              Como transformar as oportunidades
+              que chegam em avaliações e novos casos?
+            </h3>
+
+            <p>
+              Vamos estruturar toda a jornada comercial
+              do paciente, desde o primeiro contato
+              no WhatsApp até o fechamento do tratamento.
+            </p>
+
+            <p>
+              Você vai trabalhar atendimento,
+              qualificação, agendamento, confirmação,
+              follow-up, avaliação, quebra de objeções
+              e fechamento para deixar de perder oportunidades
+              por falta de processo comercial.
+            </p>
+
+          </div>
+
+        </details>
+
+
+        <!-- PRODUTO -->
+        <details>
+
+          <summary>
+            <span class="structure-number">04</span>
+            <strong>Produto</strong>
+            <span class="plus">+</span>
+          </summary>
+
+          <div class="structure-content">
+
+            <h3>
+              Como evoluir tecnicamente seus casos
+              para entregar resultados mais naturais,
+              sofisticados e valorizados?
+            </h3>
+
+            <p>
+              Através do Método Bulhões,
+              vamos trabalhar o raciocínio clínico
+              por trás dos casos, passando por planejamento,
+              anatomia, escolha dos materiais, técnica,
+              estratificação, acabamento e polimento.
+            </p>
+
+            <p>
+              O objetivo é fazer a evolução do seu produto
+              acompanhar o crescimento da sua clínica,
+              aumentando a percepção de valor do seu trabalho
+              e sua capacidade de cobrar mais pelos casos.
+            </p>
+
+          </div>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FERRAMENTAS -->
+  <section class="dark-section tools">
+
+    <div class="content-container">
+
+      <h2>
+        Ferramentas para te auxiliar
+        <em>no dia a dia:</em>
+      </h2>
+
+      <div class="tools-grid">
+
+        <article>
+          <span>01</span>
+          <h3>Scripts Comerciais</h3>
+          <p>
+            Scripts desde o primeiro contato no WhatsApp
+            até agendamento, follow-up e fechamento.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Swipe File de Conteúdos</h3>
+          <p>
+            Estruturas e referências para conteúdos
+            de Venda, Educação, Conexão e Desejo.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Campanhas e Ofertas</h3>
+          <p>
+            Estruturas de campanhas e ações comerciais
+            para gerar oportunidades de pacientes de lentes.
+          </p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Criativos e Copies</h3>
+          <p>
+            Referências para anúncios,
+            chamadas, criativos e comunicação.
+          </p>
+        </article>
+
+        <article>
+          <span>05</span>
+          <h3>Modelos de Follow-up</h3>
+          <p>
+            Sequências para recuperar
+            pacientes interessados.
+          </p>
+        </article>
+
+        <article>
+          <span>06</span>
+          <h3>CRM</h3>
+          <p>
+            Estrutura para organizar leads,
+            agendamentos, follow-ups,
+            avaliações e fechamentos.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRANSFORMAÇÃO -->
+  <section class="dark-section transformation">
+
+    <div class="transformation-card">
+
+      <div class="mini-logo">
+        O50K
+      </div>
+
+      <h2>
+        Tudo isso foi pensado para transformar
+        as lentes em uma frente capaz de levar
+        sua clínica aos
+        <em>R$50 mil por mês.</em>
+      </h2>
+
+      <div class="four-tags">
+        <span>POSICIONAMENTO</span>
+        <span>AQUISIÇÃO</span>
+        <span>COMERCIAL</span>
+        <span>PRODUTO</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MÉTODOS -->
+  <section class="dark-section methods">
+
+    <div class="content-container">
+
+      <h2>
+        A estrutura continua
+        <em>com você.</em>
+      </h2>
+
+      <div class="methods-grid">
+
+        <article>
+          <div class="method-visual">
+            <span>MB</span>
+          </div>
+          <h3>Método Bulhões</h3>
+        </article>
+
+        <article>
+          <div class="method-visual">
+            <span>CPM</span>
+          </div>
+          <h3>Método CPM</h3>
+        </article>
+
+        <article>
+          <div class="method-visual">
+            <span>SWIPE</span>
+          </div>
+          <h3>Swipe File Operação 50K</h3>
+        </article>
+
+      </div>
+
+    </div>
 
-.button-light {
-  background: var(--cream);
-  color: var(--dark-text);
-}
+  </section>
+
+
+  <!-- BÔNUS -->
+  <section class="dark-section bonuses">
+
+    <div class="content-container">
 
-.button-dark {
-  background: var(--black);
-  color: var(--white);
-}
+      <h2>
+        Mas não para
+        <em>por aí.</em>
+      </h2>
+
+      <p class="subtitle">
+        Além de todo o acompanhamento,
+        você recebe dois bônus.
+      </p>
 
+      <div class="bonus-grid">
 
-/* =====================================================
-   HERO
-===================================================== */
+        <article>
 
-.hero {
-  position: relative;
+          <span class="bonus-tag">BÔNUS 01</span>
 
-  min-height: 780px;
+          <h3>
+            Mentoria VIP Presencial
+            com Dra. Larissa Bulhões
+          </h3>
 
-  overflow: hidden;
+          <p>
+            Acompanhe um caso real ao vivo com Larissa
+            e veja de perto a tomada de decisão,
+            execução clínica e aplicação do Método Bulhões.
+          </p>
 
-  background: #0d0b0e;
-}
+          <div class="missing-media">
+            FOTO MENTORIA VIP / CASO CLÍNICO
+          </div>
 
-.hero-photo {
-  position: absolute;
+        </article>
 
-  top: 0;
-  right: 0;
-  bottom: 0;
+        <article>
 
-  width: 58%;
+          <span class="bonus-tag">BÔNUS 02</span>
 
-  overflow: hidden;
-}
+          <h3>
+            CRM
+          </h3>
 
-.hero-photo img {
-  width: 100%;
-  height: 100%;
+          <p>
+            Estrutura para organizar leads,
+            agendamentos, follow-ups,
+            avaliações e fechamentos.
+          </p>
 
-  object-fit: cover;
-  object-position: 50% 25%;
-}
+          <div class="crm-visual">
 
-.hero-gradient {
-  position: absolute;
-  inset: 0;
+            <div>
+              <span>LEADS</span>
+            </div>
 
-  background:
-    linear-gradient(
-      90deg,
-      #100d11 0%,
-      #100d11 30%,
-      rgba(16,13,17,.93) 42%,
-      rgba(16,13,17,.48) 65%,
-      rgba(16,13,17,.20) 100%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(16,13,17,.65),
-      transparent 45%
-    );
-}
+            <div>
+              <span>AVALIAÇÃO</span>
+            </div>
 
-.hero-inner {
-  position: relative;
-  z-index: 2;
+            <div>
+              <span>FECHAMENTO</span>
+            </div>
 
-  width: min(1080px, calc(100% - 48px));
-  min-height: 780px;
+          </div>
 
-  margin: 0 auto;
+        </article>
 
-  display: flex;
-  align-items: center;
-}
+      </div>
 
-.hero-copy {
-  width: 54%;
+      <div class="center">
+        <a href="#aplicacao" class="button button-light">
+          FAZER MINHA APLICAÇÃO
+        </a>
+      </div>
 
-  padding: 60px 0;
-}
+    </div>
 
-.brand {
-  margin-bottom: 45px;
+  </section>
 
-  width: fit-content;
 
-  text-align: center;
-}
+  <!-- RESULTADOS -->
+  <section class="dark-section results">
 
-.brand span {
-  display: block;
+    <div class="results-panel">
 
-  font-size: 8px;
-  letter-spacing: .22em;
-}
+      <h2>
+        Vamos deixar os resultados
+        <em>falarem por nós:</em>
+      </h2>
 
-.brand strong {
-  display: block;
+      <div class="results-track">
+
+        <div>RESULTADO</div>
+        <div>DEPOIMENTO</div>
+        <div>CASE DE LENTES</div>
+        <div>RESULTADO BULHÕES</div>
+        <div>PRINT COMERCIAL</div>
+        <div>RESULTADO</div>
+
+      </div>
+
+      <h3>
+        Agora, é a sua vez ↓
+      </h3>
+
+      <a href="#aplicacao" class="button button-light">
+        QUERO TER ESSES RESULTADOS
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- RECAP -->
+  <section class="dark-section recap">
+
+    <div class="content-container">
+
+      <h2>
+        Recapitulando:
+      </h2>
+
+      <div class="recap-grid">
+
+        <div>✓ 6 meses de acompanhamento</div>
+        <div>✓ Call de Onboarding + Estratégia Personalizada</div>
+        <div>✓ 12 Mentorias Quinzenais</div>
+        <div>✓ Grupo VIP de Acompanhamento</div>
+        <div>✓ 6 Calls Individuais de Implementação</div>
+        <div>✓ Método Bulhões</div>
+        <div>✓ Método CPM</div>
+        <div>✓ Swipe File Operação 50K</div>
+        <div>✓ Scripts Comerciais</div>
+        <div>✓ Mentoria VIP Presencial</div>
+        <div>✓ CRM</div>
+
+      </div>
+
+      <div class="center">
+        <a href="#aplicacao" class="button button-light">
+          FAZER MINHA APLICAÇÃO
+        </a>
+      </div>
 
-  margin-top: -2px;
+    </div>
+
+  </section>
+
 
-  font-family: var(--serif);
-  font-size: 30px;
-  font-weight: 400;
-}
+  <!-- PARA QUEM É -->
+  <section class="dark-wrapper audience-wrapper">
 
-.eyebrow {
-  margin-bottom: 16px;
+    <div class="audience">
 
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .18em;
-}
+      <div class="mini-logo">
+        O50K
+      </div>
+
+      <h2>
+        A Operação 50K é somente
+        para dentistas que:
+      </h2>
 
-.hero h1 {
-  max-width: 610px;
+      <div class="audience-grid">
 
-  margin-bottom: 24px;
+        <article>
+          <span>01</span>
+          <p>
+            Trabalham muito, faturam pouco
+            e sentem que poderiam ganhar mais
+            através das lentes.
+          </p>
+        </article>
 
-  font-size: clamp(46px, 5.2vw, 72px);
-  line-height: .96;
-  letter-spacing: -.045em;
-}
+        <article>
+          <span>02</span>
+          <p>
+            Realizam lentes, mas não conseguem
+            atrair novos pacientes com a frequência
+            que gostariam.
+          </p>
+        </article>
 
-.hero-description {
-  max-width: 430px;
+        <article>
+          <span>03</span>
+          <p>
+            Não sabem o que postar,
+            não têm constância e não conseguem
+            se posicionar como referência.
+          </p>
+        </article>
 
-  margin-bottom: 23px;
+        <article>
+          <span>04</span>
+          <p>
+            Carregam a clínica sozinhos,
+            cuidando de casos, agenda,
+            WhatsApp, marketing e comercial.
+          </p>
+        </article>
 
-  color: #bcb4b9;
+        <article>
+          <span>05</span>
+          <p>
+            Sentem insegurança para cobrar mais
+            e aumentar o valor dos seus casos.
+          </p>
+        </article>
 
-  font-size: 13px;
-}
+        <article>
+          <span>06</span>
+          <p>
+            Querem transformar as lentes
+            em uma das principais fontes
+            de faturamento da clínica.
+          </p>
+        </article>
 
-.hero-action {
-  max-width: 410px;
+      </div>
 
-  margin-bottom: 18px;
+      <div class="audience-footer">
 
-  font-size: 11px;
-}
+        <h3>
+          E, acima de tudo, é para quem está disposto
+          a fazer o que precisa ser feito para crescer.
+        </h3>
 
+        <a href="#aplicacao" class="button button-dark">
+          FAZER MINHA APLICAÇÃO
+        </a>
 
-/* =====================================================
-   PROBLEM
-===================================================== */
+      </div>
 
-.problem {
-  text-align: center;
-}
+    </div>
 
-.problem h2 {
-  max-width: 650px;
+  </section>
 
-  margin: 0 auto 40px;
 
-  font-size: clamp(39px, 4vw, 57px);
-  line-height: 1;
-  letter-spacing: -.035em;
-}
+  <!-- AUTORIDADE -->
+  <section class="dark-section authority">
 
-.problem-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    <div class="editorial-photo authority-photo">
 
-  gap: 30px;
+      <img
+        src="./WhatsApp Image 2026-09-21 at 17.58.56.jpeg"
+        alt="Larissa e Lucas no palco"
+      >
 
-  margin-bottom: 35px;
+      <div class="photo-gradient"></div>
 
-  text-align: left;
-}
+      <div class="photo-copy">
+        <span>OPERAÇÃO 50K</span>
 
-.problem-intro p {
-  margin: 0;
+        <h2>
+          A estratégia que ensinamos
+          nasce da operação que construímos.
+        </h2>
+      </div>
 
-  color: #68615f;
+    </div>
 
-  font-size: 13px;
-}
+  </section>
 
-.problem-highlight {
-  padding: 34px;
 
-  margin-bottom: 30px;
+  <!-- MENTORES -->
+  <section class="dark-section mentors">
 
-  background: #e4ded3;
+    <div class="content-container">
 
-  text-align: left;
-}
+      <h2>
+        Conheça seus
+        <em>mentores</em>
+      </h2>
 
-.problem-highlight p {
-  margin: 0;
 
-  font-family: var(--serif);
-  font-size: 22px;
-  line-height: 1.25;
-}
+      <div class="mentor-card">
 
-.problem-end {
-  max-width: 540px;
+        <div class="mentor-image">
+          <img
+            src="./ff794653-3453-4f8c-aada-56c0f20378dd (1).JPG"
+            alt="Dra. Larissa Bulhões"
+          >
+        </div>
 
-  margin: 0 auto 7px;
+        <div class="mentor-copy">
 
-  color: #756e6a;
+          <span>
+            PRODUTO
+          </span>
 
-  font-size: 12px;
-}
+          <h3>
+            Dra. Larissa Bulhões
+          </h3>
 
-.problem-end.strong {
-  color: var(--dark-text);
-  font-weight: 600;
-}
+          <p>
+            A Dra. Larissa Bulhões começou a trabalhar
+            com lentes em resina ainda no primeiro ano
+            de formada e transformou esse procedimento
+            em um dos pilares da sua carreira e da
+            Bulhões Odontologia, clínica que hoje
+            fatura múltiplos 7 dígitos ao ano.
+          </p>
 
+          <p>
+            Ao longo dos anos, aperfeiçoou sua própria
+            forma de executar os casos:
+            simplificar a técnica sem simplificar o resultado.
+          </p>
 
-/* =====================================================
-   PILLARS
-===================================================== */
+          <p>
+            Foi assim que nasceu o Método Bulhões,
+            aplicado diariamente em seus pacientes
+            e ensinado a outros dentistas.
+          </p>
 
-.section-heading {
-  margin-bottom: 60px;
+        </div>
 
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
+      </div>
 
-  gap: 70px;
 
-  align-items: end;
-}
+      <div class="mentor-card mentor-reverse">
 
-.section-heading h2 {
-  margin: 0;
+        <div class="mentor-image">
+          <img
+            src="./WhatsApp Image 2026-09-21 at 17.57.48.jpeg"
+            alt="Lucas Bulhões"
+          >
+        </div>
 
-  font-size: clamp(44px, 5vw, 68px);
-  line-height: .98;
-  letter-spacing: -.04em;
-}
+        <div class="mentor-copy">
 
-.section-heading p {
-  margin: 0;
+          <span>
+            POSICIONAMENTO • AQUISIÇÃO • COMERCIAL
+          </span>
 
-  max-width: 320px;
+          <h3>
+            Lucas Bulhões
+          </h3>
 
-  color: var(--muted-light);
+          <p>
+            Lucas é responsável pelas estratégias
+            de marketing, aquisição e comercial
+            aplicadas dentro da Bulhões Odontologia.
+          </p>
 
-  font-size: 12px;
-}
+          <p>
+            Atua diretamente na construção de campanhas,
+            processos comerciais, CRM e indicadores.
+          </p>
+
+          <p>
+            Dentro da Operação 50K,
+            estará ao seu lado nos pilares
+            de Posicionamento, Aquisição e Comercial.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="dark-section faq">
+
+    <div class="faq-container">
+
+      <div class="faq-heading">
+
+        <h2>
+          F.A.Q
+        </h2>
 
-.pillar {
-  min-height: 190px;
+        <p>
+          A sua dúvida pode
+          estar aqui:
+        </p>
 
-  padding: 32px 0;
+      </div>
 
-  display: grid;
-  grid-template-columns: 90px 190px 1fr;
+      <div class="faq-list">
 
-  gap: 30px;
+        <details>
+          <summary>
+            Eu ainda faço poucos casos de lentes.
+            A Operação 50K é para mim?
+            <span>+</span>
+          </summary>
 
-  align-items: start;
+          <p>
+            Sim. Vamos trabalhar tanto a evolução
+            do seu produto quanto a atração
+            de novos pacientes de lentes.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Eu já realizo lentes. Ainda faz sentido?
+            <span>+</span>
+          </summary>
+
+          <p>
+            Sim. Vamos identificar os pontos
+            que estão limitando o crescimento
+            do faturamento através das lentes.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Já investi em outros cursos e mentorias.
+            O que muda?
+            <span>+</span>
+          </summary>
+
+          <p>
+            A Operação combina 12 mentorias,
+            6 calls individuais e acompanhamento
+            durante a implementação.
+          </p>
+        </details>
 
-  border-top: 1px solid var(--line-dark);
-}
+        <details>
+          <summary>
+            Vou precisar investir muito para aplicar?
+            <span>+</span>
+          </summary>
 
-.pillar:last-child {
-  border-bottom: 1px solid var(--line-dark);
-}
+          <p>
+            Não necessariamente.
+            As estratégias serão direcionadas
+            considerando a estrutura e os recursos
+            atuais da sua clínica.
+          </p>
+        </details>
 
-.pillar-number {
-  font-family: var(--serif);
-  font-size: 35px;
-}
+        <details>
+          <summary>
+            Como funciona o acompanhamento?
+            <span>+</span>
+          </summary>
 
-.pillar-name {
-  padding-top: 8px;
+          <p>
+            São seis meses com mentorias quinzenais,
+            calls individuais e Grupo VIP
+            de acompanhamento.
+          </p>
+        </details>
 
-  color: #a9a1a6;
+        <details>
+          <summary>
+            Preciso ter equipe?
+            <span>+</span>
+          </summary>
 
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .13em;
-}
+          <p>
+            Não. Você pode começar com a estrutura
+            que possui hoje. O objetivo é evoluir
+            para uma operação em que o dentista
+            consiga focar nos casos e exista alguém
+            responsável pelo comercial e agenda.
+          </p>
+        </details>
 
-.pillar-content h3 {
-  max-width: 580px;
+      </div>
 
-  margin-bottom: 10px;
+    </div>
 
-  font-size: 28px;
-  line-height: 1.08;
-}
+  </section>
 
-.pillar-content p {
-  max-width: 570px;
 
-  margin: 0;
+  <!-- CTA FINAL -->
+  <section id="aplicacao" class="final">
 
-  color: var(--muted-light);
+    <div class="small-container">
 
-  font-size: 12px;
-}
+      <div class="logo">
+        OPERAÇÃO
+        <span>50K</span>
+      </div>
 
-.pillars-footer {
-  margin-top: 45px;
+      <h2>
+        6 meses com a gente ao seu lado,
+        transformando as lentes em uma operação que
+        <em>fatura R$50 mil por mês.</em>
+      </h2>
 
-  text-align: center;
+      <p>
+        Você terá a nossa metodologia,
+        nosso acompanhamento e nossa experiência
+        dedicados à construção da sua operação.
+      </p>
 
-  font-family: var(--serif);
-  font-size: 30px;
-}
+      <p class="final-action">
+        Faça a sua aplicação para a Operação 50K
+        e aguarde nosso time entrar em contato ↓
+      </p>
 
+      <a
+        href="SEU-LINK-DE-APLICACAO-AQUI"
+        class="button button-light"
+      >
+        FAZER APLICAÇÃO
+      </a>
 
-/* =====================================================
-   SUPPORT
-===================================================== */
+    </div>
 
-.support-grid {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
+  </section>
 
-  gap: 70px;
 
-  align-items: center;
-}
+  <footer>
+    <span>OPERAÇÃO 50K</span>
+    <span>TODOS OS DIREITOS RESERVADOS</span>
+  </footer>
 
-.support-image {
-  height: 620px;
 
-  overflow: hidden;
-}
+  <script src="./script.js"></script>
 
-.support-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.support-content h2 {
-  margin-bottom: 13px;
-
-  font-size: clamp(42px, 4vw, 58px);
-  line-height: 1;
-}
-
-.section-subtitle {
-  margin-bottom: 30px;
-
-  font-size: 12px;
-}
-
-.dark-subtitle {
-  color: #706a67;
-}
-
-.light-accordion {
-  border-top: 1px solid var(--line-light);
-}
-
-details {
-  border-bottom: 1px solid var(--line-light);
-}
-
-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 20px;
-
-  padding: 18px 0;
-
-  cursor: pointer;
-
-  list-style: none;
-
-  font-size: 12px;
-  font-weight: 500;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary span {
-  font-family: var(--serif);
-  font-size: 20px;
-
-  transition: transform .2s ease;
-}
-
-details[open] summary span {
-  transform: rotate(45deg);
-}
-
-details p {
-  max-width: 520px;
-
-  padding: 0 0 18px;
-
-  margin: 0;
-
-  color: #706a67;
-
-  font-size: 11px;
-}
-
-
-/* =====================================================
-   STRUCTURE
-===================================================== */
-
-.structure-heading {
-  max-width: 800px;
-
-  margin-bottom: 65px;
-}
-
-.structure-heading h2 {
-  margin: 0;
-
-  font-size: clamp(43px, 4.8vw, 65px);
-  line-height: 1;
-  letter-spacing: -.04em;
-}
-
-.structure-feature {
-  min-height: 420px;
-
-  padding: 65px 0;
-
-  display: grid;
-  grid-template-columns: minmax(0, 640px) 1fr;
-
-  gap: 70px;
-
-  border-top: 1px solid var(--line-dark);
-}
-
-.structure-feature:last-child {
-  border-bottom: 1px solid var(--line-dark);
-}
-
-.feature-index {
-  display: block;
-
-  margin-bottom: 15px;
-
-  color: #8e868b;
-
-  font-size: 10px;
-}
-
-.structure-copy h3 {
-  margin-bottom: 30px;
-
-  font-size: 39px;
-}
-
-.structure-copy h4 {
-  max-width: 610px;
-
-  margin-bottom: 20px;
-
-  font-family: var(--serif);
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-.structure-copy p {
-  max-width: 600px;
-
-  color: #aaa2a7;
-
-  font-size: 12px;
-}
-
-.positioning-feature {
-  grid-template-columns: 1fr 310px;
-}
-
-.instagram-frame {
-  align-self: center;
-
-  max-height: 520px;
-
-  overflow: hidden;
-
-  border: 7px solid #262127;
-  border-radius: 22px;
-
-  background: white;
-}
-
-.instagram-frame img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-
-/* =====================================================
-   TOOLS
-===================================================== */
-
-.tools-heading {
-  max-width: 650px;
-
-  margin-bottom: 50px;
-}
-
-.tools-heading h2 {
-  margin: 0;
-
-  font-size: clamp(43px, 4.7vw, 64px);
-  line-height: 1;
-}
-
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  border-top: 1px solid var(--line-light);
-  border-left: 1px solid var(--line-light);
-}
-
-.tools-grid article {
-  min-height: 210px;
-
-  padding: 27px;
-
-  border-right: 1px solid var(--line-light);
-  border-bottom: 1px solid var(--line-light);
-}
-
-.tools-grid article > span {
-  display: block;
-
-  margin-bottom: 35px;
-
-  color: #817a76;
-
-  font-size: 9px;
-}
-
-.tools-grid h3 {
-  margin-bottom: 11px;
-
-  font-size: 22px;
-}
-
-.tools-grid p {
-  margin: 0;
-
-  color: #706a67;
-
-  font-size: 11px;
-}
-
-
-/* =====================================================
-   TRANSFORMATION
-===================================================== */
-
-.transformation {
-  padding: 130px 24px;
-
-  background: var(--black);
-
-  text-align: center;
-}
-
-.transformation-inner {
-  width: min(830px, 100%);
-
-  margin: auto;
-}
-
-.transformation span {
-  display: block;
-
-  margin-bottom: 20px;
-
-  color: #898186;
-
-  font-size: 9px;
-  letter-spacing: .18em;
-}
-
-.transformation h2 {
-  margin: 0;
-
-  font-size: clamp(48px, 6vw, 78px);
-  line-height: .96;
-  letter-spacing: -.045em;
-}
-
-
-/* =====================================================
-   BEYOND
-===================================================== */
-
-.beyond h2,
-.bonuses h2,
-.results h2,
-.recap h2,
-.audience h2,
-.mentors > .container > h2 {
-  margin-bottom: 50px;
-
-  font-size: clamp(42px, 4.7vw, 63px);
-  line-height: 1;
-}
-
-.beyond-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 12px;
-}
-
-.beyond-grid article {
-  border: 1px solid var(--line-light);
-}
-
-.product-visual {
-  height: 260px;
-
-  display: grid;
-  place-items: center;
-
-  background:
-    linear-gradient(
-      145deg,
-      #d8d0c3,
-      #eee9df
-    );
-
-  font-family: var(--serif);
-  font-size: 42px;
-}
-
-.beyond-grid article > span {
-  display: block;
-
-  padding: 22px 22px 5px;
-
-  color: #827b77;
-
-  font-size: 8px;
-  letter-spacing: .12em;
-}
-
-.beyond-grid h3 {
-  padding: 0 22px 22px;
-
-  margin: 0;
-
-  font-size: 23px;
-}
-
-
-/* =====================================================
-   BONUSES
-===================================================== */
-
-.bonus-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 14px;
-}
-
-.bonus-grid article {
-  padding: 38px;
-
-  border: 1px solid var(--line-dark);
-
-  background: var(--black-card);
-}
-
-.bonus-label {
-  display: block;
-
-  margin-bottom: 25px;
-
-  color: #948c91;
-
-  font-size: 9px;
-  letter-spacing: .15em;
-}
-
-.bonus-grid h3 {
-  max-width: 420px;
-
-  margin-bottom: 15px;
-
-  font-size: 30px;
-  line-height: 1.08;
-}
-
-.bonus-grid p {
-  color: var(--muted-light);
-
-  font-size: 11px;
-}
-
-.bonus-placeholder {
-  height: 190px;
-
-  margin-top: 30px;
-
-  display: grid;
-  place-items: center;
-
-  border: 1px solid var(--line-dark);
-
-  color: #777075;
-
-  font-size: 9px;
-  letter-spacing: .1em;
-}
-
-.crm-mockup {
-  height: 190px;
-
-  margin-top: 30px;
-
-  padding: 20px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 8px;
-
-  border: 1px solid var(--line-dark);
-}
-
-.crm-mockup div {
-  border-radius: 3px;
-
-  background: #2b262c;
-}
-
-.center-button {
-  margin-top: 40px;
-
-  text-align: center;
-}
-
-
-/* =====================================================
-   RESULTS
-===================================================== */
-
-.results {
-  text-align: center;
-}
-
-.results h2 {
-  max-width: 650px;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 9px;
-
-  margin-bottom: 35px;
-}
-
-.results-grid div {
-  height: 260px;
-
-  display: grid;
-  place-items: center;
-
-  background: #ddd6ca;
-
-  color: #847d78;
-
-  font-size: 9px;
-  letter-spacing: .12em;
-}
-
-.results-call {
-  margin-bottom: 15px;
-
-  font-family: var(--serif);
-  font-size: 22px;
-}
-
-
-/* =====================================================
-   RECAP
-===================================================== */
-
-.recap-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  border-top: 1px solid var(--line-dark);
-}
-
-.recap-grid div {
-  min-height: 70px;
-
-  padding: 20px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 20px;
-
-  border-right: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
-
-  color: #c1b9bd;
-
-  font-size: 11px;
-}
-
-.recap-grid span {
-  color: #777075;
-
-  font-family: var(--serif);
-  font-size: 17px;
-}
-
-
-/* =====================================================
-   AUDIENCE
-===================================================== */
-
-.audience h2 {
-  max-width: 630px;
-}
-
-.audience-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 9px;
-}
-
-.audience-grid article {
-  min-height: 190px;
-
-  padding: 27px;
-
-  border: 1px solid var(--line-light);
-}
-
-.audience-grid span {
-  display: block;
-
-  margin-bottom: 38px;
-
-  color: #817a76;
-
-  font-size: 9px;
-}
-
-.audience-grid p {
-  margin: 0;
-
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.25;
-}
-
-.audience-bottom {
-  margin-top: 55px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 40px;
-}
-
-.audience-bottom h3 {
-  max-width: 590px;
-
-  margin: 0;
-
-  font-size: 32px;
-  line-height: 1.08;
-}
-
-
-/* =====================================================
-   AUTHORITY
-===================================================== */
-
-.authority-image {
-  position: relative;
-
-  height: 650px;
-
-  overflow: hidden;
-}
-
-.authority-image > img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center 43%;
-}
-
-.authority-overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      0deg,
-      rgba(16,13,17,.90),
-      rgba(16,13,17,.05) 65%
-    );
-}
-
-.authority-copy {
-  position: absolute;
-
-  left: 50%;
-  bottom: 65px;
-
-  width: min(1080px, calc(100% - 48px));
-
-  transform: translateX(-50%);
-}
-
-.authority-copy span {
-  display: block;
-
-  margin-bottom: 12px;
-
-  font-size: 9px;
-  letter-spacing: .15em;
-}
-
-.authority-copy h2 {
-  max-width: 680px;
-
-  margin: 0;
-
-  font-size: clamp(39px, 4.5vw, 61px);
-  line-height: 1;
-}
-
-
-/* =====================================================
-   MENTORS
-===================================================== */
-
-.mentor-row {
-  min-height: 520px;
-
-  margin-bottom: 80px;
-
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-
-  gap: 70px;
-
-  align-items: center;
-}
-
-.mentor-row-reverse {
-  grid-template-columns: .8fr 1.2fr;
-}
-
-.mentor-row-reverse .mentor-image {
-  order: 2;
-}
-
-.mentor-row-reverse .mentor-copy {
-  order: 1;
-}
-
-.mentor-image {
-  height: 520px;
-
-  overflow: hidden;
-
-  background: #201b21;
-}
-
-.mentor-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.mentor-role {
-  display: block;
-
-  margin-bottom: 15px;
-
-  color: #91898e;
-
-  font-size: 9px;
-  letter-spacing: .13em;
-}
-
-.mentor-copy h3 {
-  margin-bottom: 25px;
-
-  font-size: 42px;
-}
-
-.mentor-copy p {
-  max-width: 560px;
-
-  color: var(--muted-light);
-
-  font-size: 12px;
-}
-
-.mentor-copy strong {
-  color: var(--white);
-}
-
-.mentor-pillars {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  border-top: 1px solid var(--line-dark);
-  border-left: 1px solid var(--line-dark);
-}
-
-.mentor-pillars span {
-  padding: 20px 12px;
-
-  border-right: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
-
-  text-align: center;
-
-  color: #a49ca1;
-
-  font-size: 9px;
-  letter-spacing: .08em;
-}
-
-
-/* =====================================================
-   FAQ
-===================================================== */
-
-.faq-layout {
-  display: grid;
-  grid-template-columns: .7fr 1.3fr;
-
-  gap: 90px;
-}
-
-.faq-heading h2 {
-  margin: 0;
-
-  font-size: clamp(43px, 4.5vw, 61px);
-  line-height: 1;
-}
-
-.faq-list {
-  border-top: 1px solid var(--line-light);
-}
-
-
-/* =====================================================
-   FINAL CTA
-===================================================== */
-
-.final-cta {
-  padding: 140px 24px;
-
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      #2b252d,
-      #100d11 65%
-    );
-
-  text-align: center;
-}
-
-.final-inner {
-  width: min(760px, 100%);
-
-  margin: auto;
-}
-
-.final-brand {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.final-cta h2 {
-  margin-bottom: 25px;
-
-  font-size: clamp(47px, 5.6vw, 73px);
-  line-height: .96;
-  letter-spacing: -.045em;
-}
-
-.final-cta p {
-  max-width: 480px;
-
-  margin: 0 auto 25px;
-
-  color: #aaa2a7;
-
-  font-size: 12px;
-}
-
-.final-action {
-  display: block;
-
-  margin-bottom: 18px;
-
-  font-size: 10px;
-}
-
-
-/* FOOTER */
-
-footer {
-  padding: 25px 35px;
-
-  display: flex;
-  justify-content: space-between;
-
-  background: #0b090c;
-  color: #706970;
-
-  font-size: 8px;
-  letter-spacing: .08em;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 760px) {
-
-  .container,
-  .narrow {
-    width: calc(100% - 34px);
-  }
-
-  .section {
-    padding: 75px 0;
-  }
-
-
-  /* HERO */
-
-  .hero {
-    min-height: 760px;
-  }
-
-  .hero-photo {
-    width: 100%;
-    height: 480px;
-
-    top: 0;
-    bottom: auto;
-  }
-
-  .hero-photo img {
-    object-position: center 15%;
-  }
-
-  .hero-gradient {
-    background:
-      linear-gradient(
-        0deg,
-        #100d11 20%,
-        rgba(16,13,17,.92) 40%,
-        rgba(16,13,17,.25) 78%,
-        rgba(16,13,17,.08) 100%
-      );
-  }
-
-  .hero-inner {
-    min-height: 760px;
-
-    align-items: flex-end;
-
-    width: calc(100% - 34px);
-  }
-
-  .hero-copy {
-    width: 100%;
-
-    padding: 0 0 55px;
-  }
-
-  .brand {
-    margin-bottom: 25px;
-  }
-
-  .hero h1 {
-    max-width: 520px;
-
-    font-size: 43px;
-  }
-
-  .hero-description {
-    font-size: 11px;
-  }
-
-
-  /* PROBLEM */
-
-  .problem h2 {
-    font-size: 39px;
-  }
-
-  .problem-intro {
-    grid-template-columns: 1fr;
-
-    gap: 12px;
-  }
-
-  .problem-highlight {
-    padding: 25px;
-  }
-
-  .problem-highlight p {
-    font-size: 19px;
-  }
-
-
-  /* PILLARS */
-
-  .section-heading {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-
-    margin-bottom: 40px;
-  }
-
-  .section-heading h2 {
-    font-size: 43px;
-  }
-
-  .pillar {
-    grid-template-columns: 50px 1fr;
-
-    gap: 12px;
-
-    min-height: 0;
-  }
-
-  .pillar-name {
-    padding-top: 6px;
-  }
-
-  .pillar-content {
-    grid-column: 2;
-  }
-
-  .pillar-content h3 {
-    font-size: 24px;
-  }
-
-
-  /* SUPPORT */
-
-  .support-grid {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-  .support-image {
-    height: 430px;
-  }
-
-  .support-content h2 {
-    font-size: 41px;
-  }
-
-
-  /* STRUCTURE */
-
-  .structure-heading h2 {
-    font-size: 42px;
-  }
-
-  .structure-feature,
-  .positioning-feature {
-    min-height: 0;
-
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    padding: 50px 0;
-  }
-
-  .structure-copy h3 {
-    font-size: 34px;
-  }
-
-  .structure-copy h4 {
-    font-size: 21px;
-  }
-
-  .instagram-frame {
-    width: min(310px, 100%);
-
-    margin: auto;
-  }
-
-
-  /* TOOLS */
-
-  .tools-heading h2 {
-    font-size: 42px;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .tools-grid article {
-    min-height: 190px;
-
-    padding: 20px;
-  }
-
-
-  /* TRANSFORMATION */
-
-  .transformation {
-    padding: 90px 20px;
-  }
-
-  .transformation h2 {
-    font-size: 45px;
-  }
-
-
-  /* BEYOND */
-
-  .beyond-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-visual {
-    height: 200px;
-  }
-
-
-  /* BONUS */
-
-  .bonus-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .bonus-grid article {
-    padding: 28px;
-  }
-
-
-  /* RESULTS */
-
-  .results-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .results-grid div {
-    height: 210px;
-  }
-
-
-  /* RECAP */
-
-  .recap-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  /* AUDIENCE */
-
-  .audience-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .audience-grid article {
-    min-height: 170px;
-
-    padding: 20px;
-  }
-
-  .audience-grid p {
-    font-size: 16px;
-  }
-
-  .audience-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-
-  /* AUTHORITY */
-
-  .authority-image {
-    height: 520px;
-  }
-
-  .authority-image > img {
-    object-position: center;
-  }
-
-  .authority-copy {
-    bottom: 35px;
-
-    width: calc(100% - 34px);
-  }
-
-  .authority-copy h2 {
-    font-size: 37px;
-  }
-
-
-  /* MENTORS */
-
-  .mentor-row,
-  .mentor-row-reverse {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    margin-bottom: 70px;
-  }
-
-  .mentor-row-reverse .mentor-image,
-  .mentor-row-reverse .mentor-copy {
-    order: initial;
-  }
-
-  .mentor-image {
-    height: 470px;
-  }
-
-  .mentor-copy h3 {
-    font-size: 37px;
-  }
-
-  .mentor-pillars {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  /* FAQ */
-
-  .faq-layout {
-    grid-template-columns: 1fr;
-
-    gap: 40px;
-  }
-
-
-  /* FINAL */
-
-  .final-cta {
-    padding: 100px 20px;
-  }
-
-  .final-cta h2 {
-    font-size: 44px;
-  }
-
-
-  footer {
-    padding: 20px;
-
-    gap: 20px;
-  }
-
-}
-
-
-@media (max-width: 480px) {
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .audience-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .results-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .mentor-image {
-    height: 420px;
-  }
-
-}
+</body>
+</html>
