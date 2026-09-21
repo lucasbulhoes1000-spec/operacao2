@@ -1,1522 +1,1672 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+:root {
+  --black: #100d11;
+  --black-soft: #171318;
+  --black-card: #1d191e;
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --cream: #f1ede4;
+  --cream-dark: #e5dfd4;
 
-  <title>Operação 50K</title>
+  --white: #f6f2eb;
+  --dark-text: #201b1e;
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  --muted-light: #aaa3a6;
+  --muted-dark: #706a68;
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
-    rel="stylesheet"
-  >
+  --line-dark: rgba(255,255,255,.12);
+  --line-light: rgba(32,27,30,.15);
 
-  <link rel="stylesheet" href="styles.css">
-</head>
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
 
-<body>
 
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
+/* RESET */
 
-  <section class="hero">
+* {
+  box-sizing: border-box;
+}
 
-    <div class="hero-photo">
-      <img
-        src="IMG_7032.JPG"
-        alt="Dra. Larissa Bulhões"
-      >
-    </div>
+html {
+  scroll-behavior: smooth;
+}
 
-    <div class="hero-gradient"></div>
+body {
+  margin: 0;
 
-    <div class="hero-inner">
+  overflow-x: hidden;
 
-      <div class="hero-copy">
+  background: var(--black);
+  color: var(--white);
 
-        <div class="brand">
-          <span>OPERAÇÃO</span>
-          <strong>50K</strong>
-        </div>
+  font-family: var(--sans);
 
-        <div class="eyebrow">
-          EXCLUSIVO PARA DENTISTAS
-        </div>
+  -webkit-font-smoothing: antialiased;
+}
 
-        <h1>
-          6 meses com a gente ao seu lado,
-          transformando as lentes em uma operação que
-          <em>fatura R$50 mil por mês</em>
-        </h1>
+img {
+  display: block;
+  max-width: 100%;
+}
 
-        <p class="hero-description">
-          Você terá a nossa metodologia, nosso acompanhamento
-          e nossa experiência dedicados à construção da sua operação.
-        </p>
+a {
+  color: inherit;
+}
 
-        <p class="hero-action">
-          Faça a sua aplicação para a Operação 50K
-          e aguarde nosso time entrar em contato ↓
-        </p>
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
 
-        <a href="#aplicacao" class="button button-light">
-          FAZER APLICAÇÃO
-        </a>
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
 
-      </div>
+em {
+  font-family: var(--serif);
+  font-weight: 400;
+}
 
-    </div>
+p {
+  line-height: 1.6;
+}
 
-  </section>
 
+/* LAYOUT */
 
-  <!-- =====================================================
-       PROBLEMA
-  ====================================================== -->
+.container {
+  width: min(1080px, calc(100% - 48px));
+  margin: 0 auto;
+}
 
-  <section class="section cream problem">
+.narrow {
+  width: min(720px, calc(100% - 48px));
+  margin: 0 auto;
+}
 
-    <div class="narrow">
+.section {
+  padding: 105px 0;
+}
 
-      <span class="section-number">
-        01
-      </span>
+.dark {
+  background: var(--black);
+  color: var(--white);
+}
 
-      <h2>
-        Nós vamos resolver juntos o seu problema de
-        <em>faturamento estagnado.</em>
-      </h2>
+.cream {
+  background: var(--cream);
+  color: var(--dark-text);
+}
 
-      <div class="problem-intro">
+.section-number {
+  display: inline-block;
 
-        <p>
-          Você já tem alguns pacientes,
-          já atende e já fatura alguma coisa.
-        </p>
+  margin-bottom: 20px;
 
-        <p>
-          O problema não é falta de paciente.
-          É que mesmo com muito esforço,
-          seu resultado não aumenta todo mês.
-        </p>
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+}
 
-      </div>
+.section-number.light {
+  color: #a59da2;
+}
 
-      <div class="problem-highlight">
 
-        <p>
-          O que separa um mês de
-          <strong>R$20 mil</strong>
-          para um de
-          <strong>R$50 mil</strong>
-          é um método que une
-          <strong>
-            posicionamento, aquisição, comercial e produto
-          </strong>
-          e faz toda a diferença na hora de atrair pacientes
-          de lentes, converter oportunidades
-          e aumentar o valor dos seus casos.
-        </p>
+/* BUTTON */
 
-      </div>
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-      <p class="problem-end">
-        São esses ajustes que nós vamos identificar
-        na sua clínica.
-      </p>
+  min-height: 44px;
 
-      <p class="problem-end strong">
-        E que vão te fazer recuperar o investimento
-        na Operação 50K com novos casos de lentes.
-      </p>
+  padding: 0 25px;
 
-    </div>
+  border-radius: 999px;
 
-  </section>
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
 
+  text-decoration: none;
 
-  <!-- =====================================================
-       4 PILARES
-  ====================================================== -->
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
+}
 
-  <section class="section dark pillars">
+.button:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
 
-    <div class="container">
+.button-light {
+  background: var(--cream);
+  color: var(--dark-text);
+}
 
-      <span class="section-number light">
-        02
-      </span>
+.button-dark {
+  background: var(--black);
+  color: var(--white);
+}
 
-      <div class="section-heading">
 
-        <h2>
-          Os seus próximos
-          <em>6 meses</em>
-          serão assim
-        </h2>
+/* =====================================================
+   HERO
+===================================================== */
 
-        <p>
-          Quatro pilares trabalhando juntos
-          para construir uma operação de lentes mais forte.
-        </p>
+.hero {
+  position: relative;
 
-      </div>
+  min-height: 780px;
 
-      <div class="pillar-list">
+  overflow: hidden;
 
-        <article class="pillar">
+  background: #0d0b0e;
+}
 
-          <div class="pillar-number">
-            01
-          </div>
+.hero-photo {
+  position: absolute;
 
-          <div class="pillar-name">
-            POSICIONAMENTO
-          </div>
+  top: 0;
+  right: 0;
+  bottom: 0;
 
-          <div class="pillar-content">
+  width: 58%;
 
-            <h3>
-              Construa uma marca que faça o paciente
-              desejar realizar lentes com você.
-            </h3>
+  overflow: hidden;
+}
 
-            <p>
-              Estruture posicionamento, comunicação e conteúdo
-              para aumentar a percepção de valor do seu trabalho.
-            </p>
+.hero-photo img {
+  width: 100%;
+  height: 100%;
 
-          </div>
+  object-fit: cover;
+  object-position: 50% 25%;
+}
 
-        </article>
+.hero-gradient {
+  position: absolute;
+  inset: 0;
 
+  background:
+    linear-gradient(
+      90deg,
+      #100d11 0%,
+      #100d11 30%,
+      rgba(16,13,17,.93) 42%,
+      rgba(16,13,17,.48) 65%,
+      rgba(16,13,17,.20) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(16,13,17,.65),
+      transparent 45%
+    );
+}
 
-        <article class="pillar">
+.hero-inner {
+  position: relative;
+  z-index: 2;
 
-          <div class="pillar-number">
-            02
-          </div>
+  width: min(1080px, calc(100% - 48px));
+  min-height: 780px;
 
-          <div class="pillar-name">
-            AQUISIÇÃO
-          </div>
+  margin: 0 auto;
 
-          <div class="pillar-content">
+  display: flex;
+  align-items: center;
+}
 
-            <h3>
-              Faça mais oportunidades de pacientes
-              de lentes chegarem até você.
-            </h3>
+.hero-copy {
+  width: 54%;
 
-            <p>
-              Estruture campanhas, criativos e estratégias
-              de aquisição para colocar seu trabalho
-              na frente de potenciais pacientes.
-            </p>
+  padding: 60px 0;
+}
 
-          </div>
+.brand {
+  margin-bottom: 45px;
 
-        </article>
+  width: fit-content;
 
+  text-align: center;
+}
 
-        <article class="pillar">
+.brand span {
+  display: block;
 
-          <div class="pillar-number">
-            03
-          </div>
+  font-size: 8px;
+  letter-spacing: .22em;
+}
 
-          <div class="pillar-name">
-            COMERCIAL
-          </div>
+.brand strong {
+  display: block;
 
-          <div class="pillar-content">
+  margin-top: -2px;
 
-            <h3>
-              Transforme as oportunidades que chegam
-              em novos casos de lentes.
-            </h3>
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+}
 
-            <p>
-              Organize a jornada do WhatsApp à avaliação
-              e melhore a condução comercial
-              até o fechamento.
-            </p>
+.eyebrow {
+  margin-bottom: 16px;
 
-          </div>
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .18em;
+}
 
-        </article>
+.hero h1 {
+  max-width: 610px;
 
+  margin-bottom: 24px;
 
-        <article class="pillar">
+  font-size: clamp(46px, 5.2vw, 72px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
 
-          <div class="pillar-number">
-            04
-          </div>
+.hero-description {
+  max-width: 430px;
 
-          <div class="pillar-name">
-            PRODUTO
-          </div>
+  margin-bottom: 23px;
 
-          <div class="pillar-content">
+  color: #bcb4b9;
 
-            <h3>
-              Evolua seus casos e aumente
-              o valor percebido do seu trabalho.
-            </h3>
+  font-size: 13px;
+}
 
-            <p>
-              Evolução técnica através do Método Bulhões,
-              com foco em resultados naturais,
-              sofisticados e valorizados.
-            </p>
+.hero-action {
+  max-width: 410px;
 
-          </div>
+  margin-bottom: 18px;
 
-        </article>
+  font-size: 11px;
+}
 
-      </div>
 
-      <div class="pillars-footer">
-        Tudo isso com a gente ao seu lado.
-      </div>
+/* =====================================================
+   PROBLEM
+===================================================== */
 
-    </div>
+.problem {
+  text-align: center;
+}
 
-  </section>
+.problem h2 {
+  max-width: 650px;
 
+  margin: 0 auto 40px;
 
-  <!-- =====================================================
-       ACOMPANHAMENTO
-  ====================================================== -->
+  font-size: clamp(39px, 4vw, 57px);
+  line-height: 1;
+  letter-spacing: -.035em;
+}
 
-  <section class="section cream support">
+.problem-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    <div class="support-grid container">
+  gap: 30px;
 
-      <div class="support-image">
+  margin-bottom: 35px;
 
-        <img
-          src="WhatsApp Image 2026-09-21 at 17.53.01.jpeg"
-          alt="Larissa e Lucas"
-        >
+  text-align: left;
+}
 
-      </div>
+.problem-intro p {
+  margin: 0;
 
-      <div class="support-content">
+  color: #68615f;
 
-        <span class="section-number">
-          03
-        </span>
+  font-size: 13px;
+}
 
-        <h2>
-          Para cada etapa,
-          <em>você tem o que precisa.</em>
-        </h2>
+.problem-highlight {
+  padding: 34px;
 
-        <p class="section-subtitle dark-subtitle">
-          E em todas elas,
-          você terá alguém ao seu lado.
-        </p>
+  margin-bottom: 30px;
 
-        <div class="light-accordion">
+  background: #e4ded3;
 
-          <details open>
+  text-align: left;
+}
 
-            <summary>
-              Call de Onboarding + Estratégia Personalizada
-              <span>+</span>
-            </summary>
+.problem-highlight p {
+  margin: 0;
 
-            <p>
-              Começamos entendendo sua clínica,
-              seus números, seus casos
-              e sua estrutura atual.
-            </p>
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.25;
+}
 
-          </details>
+.problem-end {
+  max-width: 540px;
 
+  margin: 0 auto 7px;
 
-          <details>
+  color: #756e6a;
 
-            <summary>
-              12 Mentorias Quinzenais
-              <span>+</span>
-            </summary>
+  font-size: 12px;
+}
 
-            <p>
-              Encontros com Larissa e Lucas
-              durante os seis meses para direcionamento
-              dos quatro pilares.
-            </p>
+.problem-end.strong {
+  color: var(--dark-text);
+  font-weight: 600;
+}
 
-          </details>
 
+/* =====================================================
+   PILLARS
+===================================================== */
 
-          <details>
+.section-heading {
+  margin-bottom: 60px;
 
-            <summary>
-              6 Calls Individuais de Implementação
-              <span>+</span>
-            </summary>
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
 
-            <p>
-              Encontros individuais para analisar,
-              ajustar e implementar as estratégias
-              dentro da sua clínica.
-            </p>
+  gap: 70px;
 
-          </details>
+  align-items: end;
+}
 
+.section-heading h2 {
+  margin: 0;
 
-          <details>
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: .98;
+  letter-spacing: -.04em;
+}
 
-            <summary>
-              Grupo VIP de Acompanhamento
-              <span>+</span>
-            </summary>
+.section-heading p {
+  margin: 0;
 
-            <p>
-              Suporte durante os seis meses
-              para dúvidas, direcionamentos e execução.
-            </p>
+  max-width: 320px;
 
-          </details>
+  color: var(--muted-light);
 
+  font-size: 12px;
+}
 
-          <details>
+.pillar {
+  min-height: 190px;
 
-            <summary>
-              Método Bulhões
-              <span>+</span>
-            </summary>
+  padding: 32px 0;
 
-            <p>
-              Metodologia clínica aplicada
-              diariamente aos casos de lentes.
-            </p>
+  display: grid;
+  grid-template-columns: 90px 190px 1fr;
 
-          </details>
+  gap: 30px;
 
+  align-items: start;
 
-          <details>
+  border-top: 1px solid var(--line-dark);
+}
 
-            <summary>
-              Método CPM
-              <span>+</span>
-            </summary>
+.pillar:last-child {
+  border-bottom: 1px solid var(--line-dark);
+}
 
-            <p>
-              Estratégia aplicada à construção
-              e ao crescimento da operação.
-            </p>
+.pillar-number {
+  font-family: var(--serif);
+  font-size: 35px;
+}
 
-          </details>
+.pillar-name {
+  padding-top: 8px;
 
-        </div>
+  color: #a9a1a6;
 
-      </div>
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .13em;
+}
 
-    </div>
+.pillar-content h3 {
+  max-width: 580px;
 
-  </section>
+  margin-bottom: 10px;
 
+  font-size: 28px;
+  line-height: 1.08;
+}
 
-  <!-- =====================================================
-       ESTRUTURA
-  ====================================================== -->
+.pillar-content p {
+  max-width: 570px;
 
-  <section class="section dark structure">
+  margin: 0;
 
-    <div class="container">
+  color: var(--muted-light);
 
-      <span class="section-number light">
-        04
-      </span>
+  font-size: 12px;
+}
 
-      <div class="structure-heading">
+.pillars-footer {
+  margin-top: 45px;
 
-        <h2>
-          Toda a estrutura que a sua clínica precisa
-          para chegar aos
-          <em>R$50 mil por mês através das lentes:</em>
-        </h2>
+  text-align: center;
 
-      </div>
+  font-family: var(--serif);
+  font-size: 30px;
+}
 
 
-      <!-- POSICIONAMENTO -->
+/* =====================================================
+   SUPPORT
+===================================================== */
 
-      <article class="structure-feature positioning-feature">
+.support-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
 
-        <div class="structure-copy">
+  gap: 70px;
 
-          <span class="feature-index">
-            01
-          </span>
+  align-items: center;
+}
 
-          <h3>
-            Posicionamento
-          </h3>
+.support-image {
+  height: 620px;
 
-          <h4>
-            Como construir uma presença no Instagram
-            que faça o paciente perceber valor no seu trabalho
-            antes mesmo de falar com você?
-          </h4>
+  overflow: hidden;
+}
 
-          <p>
-            Vamos trabalhar a construção da sua marca pessoal,
-            organização do perfil, comunicação dos seus diferenciais
-            e uma estratégia de conteúdos baseada em
-            Venda, Educação, Conexão e Desejo.
-          </p>
+.support-image img {
+  width: 100%;
+  height: 100%;
 
-          <p>
-            Você vai entender o que mostrar,
-            como utilizar seus casos,
-            como construir autoridade
-            e como transformar seu perfil
-            em uma ferramenta capaz de despertar
-            o desejo do paciente pelas suas lentes.
-          </p>
+  object-fit: cover;
+  object-position: center;
+}
 
-        </div>
+.support-content h2 {
+  margin-bottom: 13px;
 
-        <div class="instagram-frame">
+  font-size: clamp(42px, 4vw, 58px);
+  line-height: 1;
+}
 
-          <img
-            src="WhatsApp Image 2026-09-21 at 17.53.50.jpeg"
-            alt="Instagram Dra. Larissa Bulhões"
-          >
+.section-subtitle {
+  margin-bottom: 30px;
 
-        </div>
+  font-size: 12px;
+}
 
-      </article>
+.dark-subtitle {
+  color: #706a67;
+}
 
+.light-accordion {
+  border-top: 1px solid var(--line-light);
+}
 
-      <!-- AQUISIÇÃO -->
+details {
+  border-bottom: 1px solid var(--line-light);
+}
 
-      <article class="structure-feature">
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-        <div class="structure-copy">
+  gap: 20px;
 
-          <span class="feature-index">
-            02
-          </span>
+  padding: 18px 0;
 
-          <h3>
-            Aquisição
-          </h3>
+  cursor: pointer;
 
-          <h4>
-            Como fazer novas oportunidades
-            de pacientes de lentes chegarem até você?
-          </h4>
+  list-style: none;
 
-          <p>
-            Vamos estruturar suas estratégias de aquisição,
-            campanhas, anúncios, criativos e ofertas
-            para colocar seu trabalho na frente
-            de mais potenciais pacientes.
-          </p>
+  font-size: 12px;
+  font-weight: 500;
+}
 
-          <p>
-            Você vai entender como construir campanhas,
-            analisar seus resultados e identificar
-            o que precisa ser ajustado para aumentar
-            a entrada de novas oportunidades na sua clínica.
-          </p>
+summary::-webkit-details-marker {
+  display: none;
+}
 
-        </div>
+summary span {
+  font-family: var(--serif);
+  font-size: 20px;
 
-      </article>
+  transition: transform .2s ease;
+}
 
+details[open] summary span {
+  transform: rotate(45deg);
+}
 
-      <!-- COMERCIAL -->
+details p {
+  max-width: 520px;
 
-      <article class="structure-feature">
+  padding: 0 0 18px;
 
-        <div class="structure-copy">
+  margin: 0;
 
-          <span class="feature-index">
-            03
-          </span>
+  color: #706a67;
 
-          <h3>
-            Comercial
-          </h3>
+  font-size: 11px;
+}
 
-          <h4>
-            Como transformar as oportunidades
-            que chegam em avaliações e novos casos?
-          </h4>
 
-          <p>
-            Vamos estruturar toda a jornada comercial
-            do paciente, desde o primeiro contato
-            no WhatsApp até o fechamento do tratamento.
-          </p>
+/* =====================================================
+   STRUCTURE
+===================================================== */
 
-          <p>
-            Você vai trabalhar atendimento,
-            qualificação, agendamento, confirmação,
-            follow-up, avaliação, quebra de objeções
-            e fechamento.
-          </p>
+.structure-heading {
+  max-width: 800px;
 
-        </div>
+  margin-bottom: 65px;
+}
 
-      </article>
+.structure-heading h2 {
+  margin: 0;
 
+  font-size: clamp(43px, 4.8vw, 65px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
 
-      <!-- PRODUTO -->
+.structure-feature {
+  min-height: 420px;
 
-      <article class="structure-feature">
+  padding: 65px 0;
 
-        <div class="structure-copy">
+  display: grid;
+  grid-template-columns: minmax(0, 640px) 1fr;
 
-          <span class="feature-index">
-            04
-          </span>
+  gap: 70px;
 
-          <h3>
-            Produto
-          </h3>
+  border-top: 1px solid var(--line-dark);
+}
 
-          <h4>
-            Como evoluir tecnicamente seus casos
-            para entregar resultados mais naturais,
-            sofisticados e valorizados?
-          </h4>
+.structure-feature:last-child {
+  border-bottom: 1px solid var(--line-dark);
+}
 
-          <p>
-            Através do Método Bulhões,
-            vamos trabalhar o raciocínio clínico
-            por trás dos casos, passando por planejamento,
-            anatomia, escolha dos materiais, técnica,
-            estratificação, acabamento e polimento.
-          </p>
+.feature-index {
+  display: block;
 
-          <p>
-            O objetivo é fazer a evolução do seu produto
-            acompanhar o crescimento da sua clínica,
-            aumentando a percepção de valor do seu trabalho
-            e sua capacidade de cobrar mais pelos casos.
-          </p>
+  margin-bottom: 15px;
 
-        </div>
+  color: #8e868b;
 
-      </article>
+  font-size: 10px;
+}
 
-    </div>
+.structure-copy h3 {
+  margin-bottom: 30px;
 
-  </section>
+  font-size: 39px;
+}
 
+.structure-copy h4 {
+  max-width: 610px;
 
-  <!-- =====================================================
-       FERRAMENTAS
-  ====================================================== -->
+  margin-bottom: 20px;
 
-  <section class="section cream tools">
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.2;
+}
 
-    <div class="container">
+.structure-copy p {
+  max-width: 600px;
 
-      <span class="section-number">
-        05
-      </span>
+  color: #aaa2a7;
 
-      <div class="tools-heading">
+  font-size: 12px;
+}
 
-        <h2>
-          Ferramentas para te auxiliar
-          <em>no dia a dia:</em>
-        </h2>
+.positioning-feature {
+  grid-template-columns: 1fr 310px;
+}
 
-      </div>
+.instagram-frame {
+  align-self: center;
 
-      <div class="tools-grid">
+  max-height: 520px;
 
-        <article>
+  overflow: hidden;
 
-          <span>01</span>
+  border: 7px solid #262127;
+  border-radius: 22px;
 
-          <h3>
-            Scripts Comerciais
-          </h3>
+  background: white;
+}
 
-          <p>
-            Scripts desde o primeiro contato
-            no WhatsApp até agendamento,
-            follow-up e fechamento.
-          </p>
+.instagram-frame img {
+  width: 100%;
+  height: 100%;
 
-        </article>
+  object-fit: cover;
+}
 
 
-        <article>
+/* =====================================================
+   TOOLS
+===================================================== */
 
-          <span>02</span>
+.tools-heading {
+  max-width: 650px;
 
-          <h3>
-            Swipe File de Conteúdos
-          </h3>
+  margin-bottom: 50px;
+}
 
-          <p>
-            Estruturas e referências para conteúdos
-            de Venda, Educação, Conexão e Desejo.
-          </p>
+.tools-heading h2 {
+  margin: 0;
 
-        </article>
+  font-size: clamp(43px, 4.7vw, 64px);
+  line-height: 1;
+}
 
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-        <article>
+  border-top: 1px solid var(--line-light);
+  border-left: 1px solid var(--line-light);
+}
 
-          <span>03</span>
+.tools-grid article {
+  min-height: 210px;
 
-          <h3>
-            Campanhas e Ofertas
-          </h3>
+  padding: 27px;
 
-          <p>
-            Estruturas de campanhas e ações comerciais
-            para gerar oportunidades de pacientes de lentes.
-          </p>
+  border-right: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
 
-        </article>
+.tools-grid article > span {
+  display: block;
 
+  margin-bottom: 35px;
 
-        <article>
+  color: #817a76;
 
-          <span>04</span>
+  font-size: 9px;
+}
 
-          <h3>
-            Criativos e Copies
-          </h3>
+.tools-grid h3 {
+  margin-bottom: 11px;
 
-          <p>
-            Referências para anúncios,
-            chamadas, criativos e comunicação.
-          </p>
+  font-size: 22px;
+}
 
-        </article>
+.tools-grid p {
+  margin: 0;
 
+  color: #706a67;
 
-        <article>
+  font-size: 11px;
+}
 
-          <span>05</span>
 
-          <h3>
-            Modelos de Follow-up
-          </h3>
+/* =====================================================
+   TRANSFORMATION
+===================================================== */
 
-          <p>
-            Sequências para recuperar
-            pacientes interessados.
-          </p>
+.transformation {
+  padding: 130px 24px;
 
-        </article>
+  background: var(--black);
 
+  text-align: center;
+}
 
-        <article>
+.transformation-inner {
+  width: min(830px, 100%);
 
-          <span>06</span>
+  margin: auto;
+}
 
-          <h3>
-            CRM
-          </h3>
+.transformation span {
+  display: block;
 
-          <p>
-            Organização de leads,
-            agendamentos, follow-ups,
-            avaliações e fechamentos.
-          </p>
+  margin-bottom: 20px;
 
-        </article>
+  color: #898186;
 
-      </div>
+  font-size: 9px;
+  letter-spacing: .18em;
+}
 
-    </div>
+.transformation h2 {
+  margin: 0;
 
-  </section>
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
 
 
-  <!-- =====================================================
-       TRANSFORMAÇÃO
-  ====================================================== -->
+/* =====================================================
+   BEYOND
+===================================================== */
 
-  <section class="transformation">
+.beyond h2,
+.bonuses h2,
+.results h2,
+.recap h2,
+.audience h2,
+.mentors > .container > h2 {
+  margin-bottom: 50px;
 
-    <div class="transformation-inner">
+  font-size: clamp(42px, 4.7vw, 63px);
+  line-height: 1;
+}
 
-      <span>
-        OPERAÇÃO 50K
-      </span>
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-      <h2>
-        transformar as lentes em uma frente capaz
-        de levar sua clínica aos
-        <em>R$50 mil por mês.</em>
-      </h2>
+  gap: 12px;
+}
 
-    </div>
+.beyond-grid article {
+  border: 1px solid var(--line-light);
+}
 
-  </section>
+.product-visual {
+  height: 260px;
 
+  display: grid;
+  place-items: center;
 
-  <!-- =====================================================
-       ALÉM DOS 6 MESES
-  ====================================================== -->
+  background:
+    linear-gradient(
+      145deg,
+      #d8d0c3,
+      #eee9df
+    );
 
-  <section class="section cream beyond">
+  font-family: var(--serif);
+  font-size: 42px;
+}
 
-    <div class="container">
+.beyond-grid article > span {
+  display: block;
 
-      <span class="section-number">
-        06
-      </span>
+  padding: 22px 22px 5px;
 
-      <h2>
-        A Operação 50K
-        <em>vai além.</em>
-      </h2>
+  color: #827b77;
 
-      <div class="beyond-grid">
+  font-size: 8px;
+  letter-spacing: .12em;
+}
 
-        <article>
+.beyond-grid h3 {
+  padding: 0 22px 22px;
 
-          <div class="product-visual">
-            50K
-          </div>
+  margin: 0;
 
-          <span>
-            TREINAMENTO
-          </span>
+  font-size: 23px;
+}
 
-          <h3>
-            Método Bulhões
-          </h3>
 
-        </article>
+/* =====================================================
+   BONUSES
+===================================================== */
 
+.bonus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-        <article>
+  gap: 14px;
+}
 
-          <div class="product-visual">
-            CPM
-          </div>
+.bonus-grid article {
+  padding: 38px;
 
-          <span>
-            TREINAMENTO
-          </span>
+  border: 1px solid var(--line-dark);
 
-          <h3>
-            Método CPM
-          </h3>
+  background: var(--black-card);
+}
 
-        </article>
+.bonus-label {
+  display: block;
 
+  margin-bottom: 25px;
 
-        <article>
+  color: #948c91;
 
-          <div class="product-visual">
-            SWIPE
-          </div>
+  font-size: 9px;
+  letter-spacing: .15em;
+}
 
-          <span>
-            MATERIAL DE IMPLEMENTAÇÃO
-          </span>
+.bonus-grid h3 {
+  max-width: 420px;
 
-          <h3>
-            Swipe File Operação 50K
-          </h3>
+  margin-bottom: 15px;
 
-        </article>
+  font-size: 30px;
+  line-height: 1.08;
+}
 
-      </div>
+.bonus-grid p {
+  color: var(--muted-light);
 
-    </div>
+  font-size: 11px;
+}
 
-  </section>
+.bonus-placeholder {
+  height: 190px;
 
+  margin-top: 30px;
 
-  <!-- =====================================================
-       BÔNUS
-  ====================================================== -->
+  display: grid;
+  place-items: center;
 
-  <section class="section dark bonuses">
+  border: 1px solid var(--line-dark);
 
-    <div class="container">
+  color: #777075;
 
-      <span class="section-number light">
-        07
-      </span>
+  font-size: 9px;
+  letter-spacing: .1em;
+}
 
-      <h2>
-        Mas não para
-        <em>por aí.</em>
-      </h2>
+.crm-mockup {
+  height: 190px;
 
-      <div class="bonus-grid">
+  margin-top: 30px;
 
-        <article>
+  padding: 20px;
 
-          <span class="bonus-label">
-            BÔNUS 01
-          </span>
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-          <h3>
-            Mentoria VIP Presencial
-            com Dra. Larissa Bulhões
-          </h3>
+  gap: 8px;
 
-          <p>
-            Acompanhe um caso real ao vivo com Larissa
-            e veja de perto a tomada de decisão,
-            execução clínica e aplicação do Método Bulhões.
-          </p>
+  border: 1px solid var(--line-dark);
+}
 
-          <div class="bonus-placeholder">
-            FOTO DO CASO / MENTORIA VIP
-          </div>
+.crm-mockup div {
+  border-radius: 3px;
 
-        </article>
+  background: #2b262c;
+}
 
+.center-button {
+  margin-top: 40px;
 
-        <article>
+  text-align: center;
+}
 
-          <span class="bonus-label">
-            BÔNUS 02
-          </span>
 
-          <h3>
-            CRM
-          </h3>
+/* =====================================================
+   RESULTS
+===================================================== */
 
-          <p>
-            Estrutura para organizar leads,
-            agendamentos, follow-ups,
-            avaliações e fechamentos.
-          </p>
+.results {
+  text-align: center;
+}
 
-          <div class="crm-mockup">
+.results h2 {
+  max-width: 650px;
 
-            <div></div>
-            <div></div>
-            <div></div>
+  margin-left: auto;
+  margin-right: auto;
+}
 
-          </div>
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-        </article>
+  gap: 9px;
 
-      </div>
+  margin-bottom: 35px;
+}
 
-      <div class="center-button">
+.results-grid div {
+  height: 260px;
 
-        <a href="#aplicacao" class="button button-light">
-          FAZER MINHA APLICAÇÃO
-        </a>
+  display: grid;
+  place-items: center;
 
-      </div>
+  background: #ddd6ca;
 
-    </div>
+  color: #847d78;
 
-  </section>
+  font-size: 9px;
+  letter-spacing: .12em;
+}
 
+.results-call {
+  margin-bottom: 15px;
 
-  <!-- =====================================================
-       RESULTADOS
-  ====================================================== -->
+  font-family: var(--serif);
+  font-size: 22px;
+}
 
-  <section class="section cream results">
 
-    <div class="container">
+/* =====================================================
+   RECAP
+===================================================== */
 
-      <span class="section-number">
-        08
-      </span>
+.recap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-      <h2>
-        Vamos deixar os resultados
-        <em>falarem por nós:</em>
-      </h2>
+  border-top: 1px solid var(--line-dark);
+}
 
-      <div class="results-grid">
+.recap-grid div {
+  min-height: 70px;
 
-        <div>RESULTADO</div>
-        <div>DEPOIMENTO</div>
-        <div>CASE DE LENTES</div>
-        <div>RESULTADO BULHÕES</div>
-        <div>PRINT COMERCIAL</div>
-        <div>RESULTADO</div>
+  padding: 20px;
 
-      </div>
+  display: flex;
+  align-items: center;
 
-      <p class="results-call">
-        Agora, é a sua vez ↓
-      </p>
+  gap: 20px;
 
-      <a href="#aplicacao" class="button button-dark">
-        QUERO TER ESSES RESULTADOS
-      </a>
+  border-right: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
 
-    </div>
+  color: #c1b9bd;
 
-  </section>
+  font-size: 11px;
+}
 
+.recap-grid span {
+  color: #777075;
 
-  <!-- =====================================================
-       RECAP
-  ====================================================== -->
+  font-family: var(--serif);
+  font-size: 17px;
+}
 
-  <section class="section dark recap">
 
-    <div class="container">
+/* =====================================================
+   AUDIENCE
+===================================================== */
 
-      <span class="section-number light">
-        09
-      </span>
+.audience h2 {
+  max-width: 630px;
+}
 
-      <h2>
-        Recapitulando:
-      </h2>
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-      <div class="recap-grid">
+  gap: 9px;
+}
 
-        <div>
-          <span>01</span>
-          6 meses de acompanhamento
-        </div>
+.audience-grid article {
+  min-height: 190px;
 
-        <div>
-          <span>02</span>
-          Call de Onboarding + Estratégia Personalizada
-        </div>
+  padding: 27px;
 
-        <div>
-          <span>03</span>
-          12 Mentorias Quinzenais com Larissa e Lucas
-        </div>
+  border: 1px solid var(--line-light);
+}
 
-        <div>
-          <span>04</span>
-          Grupo VIP de Acompanhamento
-        </div>
+.audience-grid span {
+  display: block;
 
-        <div>
-          <span>05</span>
-          6 Calls Individuais de Implementação
-        </div>
+  margin-bottom: 38px;
 
-        <div>
-          <span>06</span>
-          Treinamento Gravado Método Bulhões
-        </div>
+  color: #817a76;
 
-        <div>
-          <span>07</span>
-          Treinamento Gravado Método CPM
-        </div>
+  font-size: 9px;
+}
 
-        <div>
-          <span>08</span>
-          Swipe File Operação 50K
-        </div>
+.audience-grid p {
+  margin: 0;
 
-        <div>
-          <span>09</span>
-          Scripts Comerciais
-        </div>
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.25;
+}
 
-        <div>
-          <span>10</span>
-          Mentoria VIP Presencial
-        </div>
+.audience-bottom {
+  margin-top: 55px;
 
-        <div>
-          <span>11</span>
-          CRM
-        </div>
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-      </div>
+  gap: 40px;
+}
 
-    </div>
+.audience-bottom h3 {
+  max-width: 590px;
 
-  </section>
+  margin: 0;
 
+  font-size: 32px;
+  line-height: 1.08;
+}
 
-  <!-- =====================================================
-       PARA QUEM É
-  ====================================================== -->
 
-  <section class="section cream audience">
+/* =====================================================
+   AUTHORITY
+===================================================== */
 
-    <div class="container">
+.authority-image {
+  position: relative;
 
-      <span class="section-number">
-        10
-      </span>
+  height: 650px;
 
-      <h2>
-        A Operação 50K é somente
-        para dentistas que:
-      </h2>
+  overflow: hidden;
+}
 
-      <div class="audience-grid">
+.authority-image > img {
+  width: 100%;
+  height: 100%;
 
-        <article>
+  object-fit: cover;
+  object-position: center 43%;
+}
 
-          <span>01</span>
+.authority-overlay {
+  position: absolute;
+  inset: 0;
 
-          <p>
-            Trabalham muito, faturam pouco
-            e sentem que poderiam ganhar mais
-            através das lentes.
-          </p>
+  background:
+    linear-gradient(
+      0deg,
+      rgba(16,13,17,.90),
+      rgba(16,13,17,.05) 65%
+    );
+}
 
-        </article>
+.authority-copy {
+  position: absolute;
 
+  left: 50%;
+  bottom: 65px;
 
-        <article>
+  width: min(1080px, calc(100% - 48px));
 
-          <span>02</span>
+  transform: translateX(-50%);
+}
 
-          <p>
-            Realizam lentes, mas não conseguem
-            atrair novos pacientes com a frequência
-            que gostariam.
-          </p>
+.authority-copy span {
+  display: block;
 
-        </article>
+  margin-bottom: 12px;
 
+  font-size: 9px;
+  letter-spacing: .15em;
+}
 
-        <article>
+.authority-copy h2 {
+  max-width: 680px;
 
-          <span>03</span>
+  margin: 0;
 
-          <p>
-            Não sabem o que postar,
-            não têm constância e não conseguem
-            se posicionar como referência em lentes.
-          </p>
+  font-size: clamp(39px, 4.5vw, 61px);
+  line-height: 1;
+}
 
-        </article>
 
+/* =====================================================
+   MENTORS
+===================================================== */
 
-        <article>
+.mentor-row {
+  min-height: 520px;
 
-          <span>04</span>
+  margin-bottom: 80px;
 
-          <p>
-            Carregam a clínica sozinhos,
-            cuidando dos casos, agenda,
-            WhatsApp, marketing e comercial.
-          </p>
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
 
-        </article>
+  gap: 70px;
 
+  align-items: center;
+}
 
-        <article>
+.mentor-row-reverse {
+  grid-template-columns: .8fr 1.2fr;
+}
 
-          <span>05</span>
+.mentor-row-reverse .mentor-image {
+  order: 2;
+}
 
-          <p>
-            Sentem insegurança para cobrar mais
-            e aumentar o valor dos seus casos.
-          </p>
+.mentor-row-reverse .mentor-copy {
+  order: 1;
+}
 
-        </article>
+.mentor-image {
+  height: 520px;
 
+  overflow: hidden;
 
-        <article>
+  background: #201b21;
+}
 
-          <span>06</span>
+.mentor-image img {
+  width: 100%;
+  height: 100%;
 
-          <p>
-            Querem transformar as lentes
-            em uma das principais fontes
-            de faturamento da clínica
-            e chegar aos R$50 mil por mês.
-          </p>
+  object-fit: cover;
+  object-position: center;
+}
 
-        </article>
+.mentor-role {
+  display: block;
 
-      </div>
+  margin-bottom: 15px;
 
-      <div class="audience-bottom">
+  color: #91898e;
 
-        <h3>
-          É para quem está disposto
-          a fazer o que precisa ser feito
-          para crescer.
-        </h3>
+  font-size: 9px;
+  letter-spacing: .13em;
+}
 
-        <a href="#aplicacao" class="button button-dark">
-          FAZER MINHA APLICAÇÃO
-        </a>
+.mentor-copy h3 {
+  margin-bottom: 25px;
 
-      </div>
+  font-size: 42px;
+}
 
-    </div>
+.mentor-copy p {
+  max-width: 560px;
 
-  </section>
+  color: var(--muted-light);
 
+  font-size: 12px;
+}
 
-  <!-- =====================================================
-       AUTORIDADE
-  ====================================================== -->
+.mentor-copy strong {
+  color: var(--white);
+}
 
-  <section class="authority-image">
+.mentor-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    <img
-      src="WhatsApp Image 2026-09-21 at 17.58.56.jpeg"
-      alt="Larissa e Lucas no palco"
-    >
+  border-top: 1px solid var(--line-dark);
+  border-left: 1px solid var(--line-dark);
+}
 
-    <div class="authority-overlay"></div>
+.mentor-pillars span {
+  padding: 20px 12px;
 
-    <div class="authority-copy">
+  border-right: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
 
-      <span>
-        QUEM VAI ESTAR AO SEU LADO
-      </span>
+  text-align: center;
 
-      <h2>
-        Estratégia e execução
-        construídas dentro da própria operação.
-      </h2>
+  color: #a49ca1;
 
-    </div>
+  font-size: 9px;
+  letter-spacing: .08em;
+}
 
-  </section>
 
+/* =====================================================
+   FAQ
+===================================================== */
 
-  <!-- =====================================================
-       MENTORES
-  ====================================================== -->
+.faq-layout {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
 
-  <section class="section dark mentors">
+  gap: 90px;
+}
 
-    <div class="container">
+.faq-heading h2 {
+  margin: 0;
 
-      <span class="section-number light">
-        11
-      </span>
+  font-size: clamp(43px, 4.5vw, 61px);
+  line-height: 1;
+}
 
-      <h2>
-        Conheça seus
-        <em>mentores</em>
-      </h2>
+.faq-list {
+  border-top: 1px solid var(--line-light);
+}
 
 
-      <div class="mentor-row">
+/* =====================================================
+   FINAL CTA
+===================================================== */
 
-        <div class="mentor-image">
+.final-cta {
+  padding: 140px 24px;
 
-          <img
-            src="ff794653-3453-4f8c-aada-56c0f20378dd (1).JPG"
-            alt="Dra. Larissa Bulhões"
-          >
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      #2b252d,
+      #100d11 65%
+    );
 
-        </div>
+  text-align: center;
+}
 
-        <div class="mentor-copy">
+.final-inner {
+  width: min(760px, 100%);
 
-          <span class="mentor-role">
-            PRODUTO
-          </span>
+  margin: auto;
+}
 
-          <h3>
-            Dra. Larissa Bulhões
-          </h3>
+.final-brand {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-          <p>
-            A Dra. Larissa Bulhões começou a trabalhar
-            com lentes em resina ainda no primeiro ano
-            de formada e transformou esse procedimento
-            em um dos pilares da sua carreira
-            e da Bulhões Odontologia,
-            clínica que hoje fatura múltiplos
-            7 dígitos ao ano.
-          </p>
+.final-cta h2 {
+  margin-bottom: 25px;
 
-          <p>
-            Ao longo dos anos, aperfeiçoou sua própria
-            forma de executar os casos:
-            <strong>
-              simplificar a técnica sem simplificar o resultado.
-            </strong>
-          </p>
+  font-size: clamp(47px, 5.6vw, 73px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
 
-          <p>
-            Foi assim que nasceu o Método Bulhões,
-            aplicado diariamente em seus pacientes
-            e ensinado a outros dentistas.
-          </p>
+.final-cta p {
+  max-width: 480px;
 
-        </div>
+  margin: 0 auto 25px;
 
-      </div>
+  color: #aaa2a7;
 
+  font-size: 12px;
+}
 
-      <div class="mentor-row mentor-row-reverse">
+.final-action {
+  display: block;
 
-        <div class="mentor-image">
+  margin-bottom: 18px;
 
-          <img
-            src="WhatsApp Image 2026-09-21 at 17.57.48.jpeg"
-            alt="Lucas Bulhões"
-          >
+  font-size: 10px;
+}
 
-        </div>
 
-        <div class="mentor-copy">
+/* FOOTER */
 
-          <span class="mentor-role">
-            POSICIONAMENTO • AQUISIÇÃO • COMERCIAL
-          </span>
+footer {
+  padding: 25px 35px;
 
-          <h3>
-            Lucas Bulhões
-          </h3>
+  display: flex;
+  justify-content: space-between;
 
-          <p>
-            Lucas é responsável pelas estratégias
-            de marketing, aquisição e comercial
-            aplicadas dentro da Bulhões Odontologia.
-          </p>
+  background: #0b090c;
+  color: #706970;
 
-          <p>
-            Atua diretamente na construção
-            de campanhas, processos comerciais,
-            CRM e indicadores.
-          </p>
+  font-size: 8px;
+  letter-spacing: .08em;
+}
 
-          <p>
-            Dentro da Operação 50K,
-            estará ao seu lado nos pilares
-            de Posicionamento, Aquisição e Comercial.
-          </p>
 
-        </div>
+/* =====================================================
+   MOBILE
+===================================================== */
 
-      </div>
+@media (max-width: 760px) {
 
+  .container,
+  .narrow {
+    width: calc(100% - 34px);
+  }
 
-      <div class="mentor-pillars">
+  .section {
+    padding: 75px 0;
+  }
 
-        <span>POSICIONAMENTO</span>
-        <span>AQUISIÇÃO</span>
-        <span>COMERCIAL</span>
-        <span>PRODUTO</span>
 
-      </div>
+  /* HERO */
 
-    </div>
+  .hero {
+    min-height: 760px;
+  }
 
-  </section>
+  .hero-photo {
+    width: 100%;
+    height: 480px;
 
+    top: 0;
+    bottom: auto;
+  }
 
-  <!-- =====================================================
-       FAQ
-  ====================================================== -->
+  .hero-photo img {
+    object-position: center 15%;
+  }
 
-  <section class="section cream faq">
+  .hero-gradient {
+    background:
+      linear-gradient(
+        0deg,
+        #100d11 20%,
+        rgba(16,13,17,.92) 40%,
+        rgba(16,13,17,.25) 78%,
+        rgba(16,13,17,.08) 100%
+      );
+  }
 
-    <div class="container faq-layout">
+  .hero-inner {
+    min-height: 760px;
 
-      <div class="faq-heading">
+    align-items: flex-end;
 
-        <span class="section-number">
-          12
-        </span>
+    width: calc(100% - 34px);
+  }
 
-        <h2>
-          A sua dúvida
-          <em>pode estar aqui:</em>
-        </h2>
+  .hero-copy {
+    width: 100%;
 
-      </div>
+    padding: 0 0 55px;
+  }
 
+  .brand {
+    margin-bottom: 25px;
+  }
 
-      <div class="faq-list">
+  .hero h1 {
+    max-width: 520px;
 
-        <details>
+    font-size: 43px;
+  }
 
-          <summary>
-            Eu ainda faço poucos casos de lentes.
-            A Operação 50K é para mim?
-            <span>+</span>
-          </summary>
+  .hero-description {
+    font-size: 11px;
+  }
 
-          <p>
-            Sim. Vamos trabalhar tanto a evolução
-            do seu produto quanto a atração
-            de novos pacientes de lentes.
-          </p>
 
-        </details>
+  /* PROBLEM */
 
+  .problem h2 {
+    font-size: 39px;
+  }
 
-        <details>
+  .problem-intro {
+    grid-template-columns: 1fr;
 
-          <summary>
-            Eu já realizo lentes.
-            Ainda faz sentido?
-            <span>+</span>
-          </summary>
+    gap: 12px;
+  }
 
-          <p>
-            Sim. Vamos identificar os pontos
-            que estão limitando o crescimento
-            do faturamento através das lentes.
-          </p>
+  .problem-highlight {
+    padding: 25px;
+  }
 
-        </details>
+  .problem-highlight p {
+    font-size: 19px;
+  }
 
 
-        <details>
+  /* PILLARS */
 
-          <summary>
-            Já investi em outros cursos e mentorias.
-            O que muda?
-            <span>+</span>
-          </summary>
+  .section-heading {
+    grid-template-columns: 1fr;
 
-          <p>
-            A Operação combina 12 mentorias,
-            6 calls individuais e acompanhamento
-            durante a implementação.
-          </p>
+    gap: 20px;
 
-        </details>
+    margin-bottom: 40px;
+  }
 
+  .section-heading h2 {
+    font-size: 43px;
+  }
 
-        <details>
+  .pillar {
+    grid-template-columns: 50px 1fr;
 
-          <summary>
-            Vou precisar investir muito para aplicar?
-            <span>+</span>
-          </summary>
+    gap: 12px;
 
-          <p>
-            Não necessariamente.
-            As estratégias serão direcionadas
-            considerando a estrutura e os recursos
-            atuais da sua clínica.
-          </p>
+    min-height: 0;
+  }
 
-        </details>
+  .pillar-name {
+    padding-top: 6px;
+  }
 
+  .pillar-content {
+    grid-column: 2;
+  }
 
-        <details>
+  .pillar-content h3 {
+    font-size: 24px;
+  }
 
-          <summary>
-            Como funciona o acompanhamento?
-            <span>+</span>
-          </summary>
 
-          <p>
-            São seis meses com mentorias quinzenais,
-            calls individuais e Grupo VIP
-            de acompanhamento.
-          </p>
+  /* SUPPORT */
 
-        </details>
+  .support-grid {
+    grid-template-columns: 1fr;
 
+    gap: 40px;
+  }
 
-        <details>
+  .support-image {
+    height: 430px;
+  }
 
-          <summary>
-            Preciso ter equipe?
-            <span>+</span>
-          </summary>
+  .support-content h2 {
+    font-size: 41px;
+  }
 
-          <p>
-            Não. Você pode começar com a estrutura
-            que possui hoje. O objetivo é evoluir
-            para uma operação em que o dentista
-            consiga focar nos casos e exista alguém
-            responsável pelo comercial e agenda.
-          </p>
 
-        </details>
+  /* STRUCTURE */
 
-      </div>
+  .structure-heading h2 {
+    font-size: 42px;
+  }
 
-    </div>
+  .structure-feature,
+  .positioning-feature {
+    min-height: 0;
 
-  </section>
+    grid-template-columns: 1fr;
 
+    gap: 35px;
 
-  <!-- =====================================================
-       FINAL
-  ====================================================== -->
+    padding: 50px 0;
+  }
 
-  <section id="aplicacao" class="final-cta">
+  .structure-copy h3 {
+    font-size: 34px;
+  }
 
-    <div class="final-inner">
+  .structure-copy h4 {
+    font-size: 21px;
+  }
 
-      <div class="brand final-brand">
+  .instagram-frame {
+    width: min(310px, 100%);
 
-        <span>
-          OPERAÇÃO
-        </span>
+    margin: auto;
+  }
 
-        <strong>
-          50K
-        </strong>
 
-      </div>
+  /* TOOLS */
 
-      <h2>
-        6 meses com a gente ao seu lado,
-        transformando as lentes em uma operação que
-        <em>fatura R$50 mil por mês.</em>
-      </h2>
+  .tools-heading h2 {
+    font-size: 42px;
+  }
 
-      <p>
-        Você terá a nossa metodologia,
-        nosso acompanhamento e nossa experiência
-        dedicados à construção da sua operação.
-      </p>
+  .tools-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-      <span class="final-action">
-        Faça a sua aplicação para a Operação 50K
-        e aguarde nosso time entrar em contato ↓
-      </span>
+  .tools-grid article {
+    min-height: 190px;
 
-      <a
-        href="SEU-LINK-DE-APLICACAO-AQUI"
-        class="button button-light"
-      >
-        FAZER APLICAÇÃO
-      </a>
+    padding: 20px;
+  }
 
-    </div>
 
-  </section>
+  /* TRANSFORMATION */
 
+  .transformation {
+    padding: 90px 20px;
+  }
 
-  <footer>
+  .transformation h2 {
+    font-size: 45px;
+  }
 
-    <span>
-      OPERAÇÃO 50K
-    </span>
 
-    <span>
-      TODOS OS DIREITOS RESERVADOS
-    </span>
+  /* BEYOND */
 
-  </footer>
+  .beyond-grid {
+    grid-template-columns: 1fr;
+  }
 
+  .product-visual {
+    height: 200px;
+  }
 
-  <script src="script.js"></script>
 
-</body>
+  /* BONUS */
 
-</html>
+  .bonus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bonus-grid article {
+    padding: 28px;
+  }
+
+
+  /* RESULTS */
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .results-grid div {
+    height: 210px;
+  }
+
+
+  /* RECAP */
+
+  .recap-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* AUDIENCE */
+
+  .audience-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .audience-grid article {
+    min-height: 170px;
+
+    padding: 20px;
+  }
+
+  .audience-grid p {
+    font-size: 16px;
+  }
+
+  .audience-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  /* AUTHORITY */
+
+  .authority-image {
+    height: 520px;
+  }
+
+  .authority-image > img {
+    object-position: center;
+  }
+
+  .authority-copy {
+    bottom: 35px;
+
+    width: calc(100% - 34px);
+  }
+
+  .authority-copy h2 {
+    font-size: 37px;
+  }
+
+
+  /* MENTORS */
+
+  .mentor-row,
+  .mentor-row-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-bottom: 70px;
+  }
+
+  .mentor-row-reverse .mentor-image,
+  .mentor-row-reverse .mentor-copy {
+    order: initial;
+  }
+
+  .mentor-image {
+    height: 470px;
+  }
+
+  .mentor-copy h3 {
+    font-size: 37px;
+  }
+
+  .mentor-pillars {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* FAQ */
+
+  .faq-layout {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  /* FINAL */
+
+  .final-cta {
+    padding: 100px 20px;
+  }
+
+  .final-cta h2 {
+    font-size: 44px;
+  }
+
+
+  footer {
+    padding: 20px;
+
+    gap: 20px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mentor-image {
+    height: 420px;
+  }
+
+}
