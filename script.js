@@ -1,17 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /*
-  ============================================================
-  ACCORDIONS
-  ============================================================
-  Dentro de cada grupo, apenas um item fica aberto por vez.
-  */
-
-  const accordionGroups = document.querySelectorAll(
+  const groups = document.querySelectorAll(
     ".accordion-grid, .structure-list, .faq-list"
   );
 
-  accordionGroups.forEach(function (group) {
+  groups.forEach(function (group) {
 
     const items = group.querySelectorAll("details");
 
@@ -23,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
 
-        items.forEach(function (otherItem) {
+        items.forEach(function (other) {
 
-          if (otherItem !== item) {
-            otherItem.open = false;
+          if (other !== item) {
+            other.open = false;
           }
 
         });
@@ -38,25 +31,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  /*
-  ============================================================
-  SCROLL SUAVE
-  ============================================================
-  */
+  const links = document.querySelectorAll('a[href^="#"]');
 
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
-
-  internalLinks.forEach(function (link) {
+  links.forEach(function (link) {
 
     link.addEventListener("click", function (event) {
 
-      const targetId = link.getAttribute("href");
+      const href = link.getAttribute("href");
 
-      if (!targetId || targetId === "#") {
+      if (!href || href === "#") {
         return;
       }
 
-      const target = document.querySelector(targetId);
+      const target = document.querySelector(href);
 
       if (!target) {
         return;
