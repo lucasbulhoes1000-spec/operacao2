@@ -1,23 +1,63 @@
-document
-  .querySelectorAll(".accordion details")
-  .forEach((detail) => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    detail.addEventListener("toggle", () => {
+  const groups = document.querySelectorAll(
+    ".accordion-grid, .structure-list, .faq-list"
+  );
 
-      if (!detail.open) return;
+  groups.forEach(function (group) {
 
-      const accordion = detail.parentElement;
+    const items = group.querySelectorAll("details");
 
-      accordion
-        .querySelectorAll("details")
-        .forEach((otherDetail) => {
+    items.forEach(function (item) {
 
-          if (otherDetail !== detail) {
-            otherDetail.open = false;
+      item.addEventListener("toggle", function () {
+
+        if (!item.open) {
+          return;
+        }
+
+        items.forEach(function (other) {
+
+          if (other !== item) {
+            other.open = false;
           }
 
         });
 
+      });
+
     });
 
   });
+
+
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const href = link.getAttribute("href");
+
+      if (!href || href === "#") {
+        return;
+      }
+
+      const target = document.querySelector(href);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    });
+
+  });
+
+});
