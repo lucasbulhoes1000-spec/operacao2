@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "modal-open"
     );
 
-
     window.setTimeout(() => {
 
       const firstInput = modal.querySelector(
@@ -179,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
           11
         );
 
-
         if (value.length > 10) {
 
           value = value.replace(
@@ -210,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         event.target.value = value;
 
       }
@@ -221,10 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // =====================================================
   // ENVIO DO FORMULÁRIO
-  //
-  // IMPORTANTE:
-  // Neste momento ele controla o comportamento visual.
-  // Quando conectarmos ao CRM / GHL, a integração entra aqui.
   // =====================================================
 
   if (applicationForm) {
@@ -235,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.preventDefault();
 
-
         if (!applicationForm.checkValidity()) {
 
           applicationForm.reportValidity();
@@ -244,11 +236,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         const formData = new FormData(
           applicationForm
         );
-
 
         const applicationData = {
 
@@ -269,12 +259,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         };
 
-
         console.log(
           "Aplicação Operação 50K:",
           applicationData
         );
-
 
         if (applicationStep) {
 
@@ -284,7 +272,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
         if (applicationSuccess) {
 
           applicationSuccess.classList.add(
@@ -292,7 +279,6 @@ document.addEventListener("DOMContentLoaded", () => {
           );
 
         }
-
 
         applicationForm.reset();
 
@@ -303,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // =====================================================
-  // RESET DO POPUP APÓS FECHAR
+  // RESET DO POPUP
   // =====================================================
 
   if (modal) {
@@ -323,7 +309,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
           }
-
 
           if (applicationSuccess) {
 
