@@ -11,10 +11,8 @@
   --text-dark: #211c1f;
 
   --muted: #aaa2a7;
-  --muted-dark: #746d71;
 
   --dark-line: rgba(255, 255, 255, 0.09);
-  --light-line: rgba(32, 27, 30, 0.13);
 
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
@@ -46,9 +44,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
 }
 
 h1,
@@ -140,6 +152,8 @@ p {
 
   text-decoration: none;
 
+  cursor: pointer;
+
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
@@ -195,7 +209,6 @@ p {
   height: 100%;
 
   object-fit: cover;
-
   object-position: 50% 20%;
 }
 
@@ -221,7 +234,6 @@ p {
 
 .hero-inner {
   position: relative;
-
   z-index: 2;
 
   width: min(1020px, calc(100% - 48px));
@@ -231,13 +243,11 @@ p {
   margin: 0 auto;
 
   display: flex;
-
   align-items: center;
 }
 
 .hero-copy {
   width: 55%;
-
   padding: 60px 0;
 }
 
@@ -305,7 +315,7 @@ p {
 
 
 /* =====================================================
-   TRANSIÇÃO
+   TRANSITION
 ===================================================== */
 
 .transition-section {
@@ -342,7 +352,6 @@ p {
 
 .problem {
   background: var(--black);
-
   text-align: center;
 }
 
@@ -355,7 +364,6 @@ p {
 
 .problem-copy {
   max-width: 520px;
-
   margin: 0 auto;
 }
 
@@ -410,7 +418,6 @@ p {
 
 .journey-section {
   padding: 25px 0 85px;
-
   background: var(--black);
 }
 
@@ -449,7 +456,6 @@ p {
 
 .journey-flow {
   width: min(325px, 100%);
-
   margin: 0 auto;
 }
 
@@ -523,7 +529,6 @@ p {
 
 .accompaniment-image {
   width: min(590px, 100%);
-
   height: 330px;
 
   margin: 0 auto 46px;
@@ -538,7 +543,6 @@ p {
   height: 100%;
 
   object-fit: cover;
-
   object-position: center;
 }
 
@@ -629,7 +633,6 @@ details > p {
 
 .structure-list {
   width: min(700px, 100%);
-
   margin: 0 auto;
 }
 
@@ -686,8 +689,12 @@ details > p {
 
 
 /* =====================================================
-   FEATURE PHOTOS
+   TOOLS
 ===================================================== */
+
+.tools {
+  background: var(--black);
+}
 
 .feature-photo {
   position: relative;
@@ -702,15 +709,8 @@ details > p {
   background: var(--black-card);
 }
 
-
-/* =====================================================
-   TOOLS PHOTO
-   IMPORTANTE: preserva a foto vertical
-===================================================== */
-
 .tools-photo {
   width: min(590px, 100%);
-
   height: 360px;
 
   margin-bottom: 45px;
@@ -721,22 +721,7 @@ details > p {
   height: 100%;
 
   object-fit: cover;
-
-  /*
-    A foto original é vertical.
-    O enquadramento mantém Larissa + notebook
-    sem esticar a imagem.
-  */
   object-position: center 58%;
-}
-
-
-/* =====================================================
-   TOOLS
-===================================================== */
-
-.tools {
-  background: var(--black);
 }
 
 .tools-grid {
@@ -826,7 +811,6 @@ details > p {
 
 .transformation-copy {
   position: relative;
-
   z-index: 2;
 
   padding: 65px 20px 65px 52px;
@@ -873,12 +857,6 @@ details > p {
   height: 100%;
 
   object-fit: cover;
-
-  /*
-    ADF04463 é vertical.
-    Mantém principalmente rosto e tronco,
-    sem distorção.
-  */
   object-position: center 34%;
 }
 
@@ -893,7 +871,6 @@ details > p {
 
 .methods-list {
   width: min(580px, 100%);
-
   margin: 0 auto;
 }
 
@@ -931,11 +908,12 @@ details > p {
   background: var(--black-soft);
 }
 
-.bonus-image,
-.crm-art {
+.bonus-image {
   height: 235px;
 
   overflow: hidden;
+
+  background: #181419;
 }
 
 .bonus-image img {
@@ -943,8 +921,12 @@ details > p {
   height: 100%;
 
   object-fit: cover;
+  object-position: center;
+}
 
-  object-position: center 48%;
+.bonus-image-crm img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .bonus-content {
@@ -975,105 +957,6 @@ details > p {
   color: #958d92;
 
   font-size: 9px;
-}
-
-
-/* =====================================================
-   CRM ART
-===================================================== */
-
-.crm-art {
-  padding: 28px;
-
-  display: flex;
-
-  align-items: center;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      #393039,
-      #1d181e 70%
-    );
-}
-
-.crm-browser {
-  width: 100%;
-
-  padding: 10px;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
-
-  background: #151216;
-
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-}
-
-.crm-top {
-  display: flex;
-
-  gap: 4px;
-
-  padding-bottom: 9px;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.crm-top span {
-  width: 5px;
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: #6c646a;
-}
-
-.crm-columns {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 5px;
-
-  padding-top: 10px;
-}
-
-.crm-columns > div {
-  min-height: 120px;
-
-  padding: 6px;
-
-  border-radius: 3px;
-
-  background: #211c22;
-}
-
-.crm-columns small {
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #827a7f;
-
-  font-size: 4px;
-}
-
-.crm-columns i {
-  display: block;
-
-  height: 20px;
-
-  margin-bottom: 4px;
-
-  border-radius: 2px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #373038,
-      #29232a
-    );
 }
 
 
@@ -1141,13 +1024,11 @@ details > p {
   height: 330px;
 
   object-fit: cover;
-
   object-position: top;
 }
 
 .results-cta {
   margin-top: 30px;
-
   text-align: center;
 }
 
@@ -1274,12 +1155,6 @@ details > p {
   font-size: 9px;
 }
 
-
-/* =====================================================
-   AUDIENCE FINAL
-   FOTO VERTICAL PRESERVADA
-===================================================== */
-
 .audience-final {
   width: min(720px, 100%);
 
@@ -1316,41 +1191,59 @@ details > p {
   height: 100%;
 
   object-fit: cover;
-
-  /*
-    IMG_7029 é vertical e de corpo inteiro.
-    Aqui mantemos boa parte da composição.
-  */
   object-position: center 20%;
 }
 
 
 /* =====================================================
-   MENTORS
+   MENTORES — CORRIGIDO
 ===================================================== */
 
 .mentors {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
   background: var(--black);
 }
 
-.mentor-grid {
-  width: min(760px, 100%);
+.mentors-heading {
+  margin-bottom: 45px;
+}
 
-  margin: 0 auto;
+.mentor-row {
+  width: min(940px, 100%);
+
+  margin: 0 auto 70px;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(280px, 430px) 1fr;
 
-  gap: 35px;
+  gap: 55px;
+
+  align-items: start;
+}
+
+.mentor-row:last-child {
+  margin-bottom: 0;
+}
+
+.mentor-row-reverse .mentor-photo {
+  order: 2;
+}
+
+.mentor-row-reverse .mentor-copy {
+  order: 1;
 }
 
 .mentor-photo {
-  height: 300px;
-
-  margin-bottom: 20px;
+  height: 480px;
 
   overflow: hidden;
+
+  border-radius: 3px;
+
+  background: var(--black-card);
 }
 
 .mentor-photo img {
@@ -1358,33 +1251,46 @@ details > p {
   height: 100%;
 
   object-fit: cover;
-
   object-position: center 20%;
 }
 
-.mentor > span {
+.mentor-copy {
+  padding-top: 18px;
+}
+
+.mentor-copy > span {
   display: block;
 
-  min-height: 22px;
-
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 
   color: #81797e;
 
   font-size: 7px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
 }
 
-.mentor h3 {
-  margin-bottom: 16px;
+.mentor-copy h3 {
+  margin: 0 0 25px;
 
-  font-size: 28px;
+  font-size: clamp(31px, 3vw, 42px);
+  line-height: 1;
 }
 
-.mentor p {
+.mentor-text {
+  display: block;
+}
+
+.mentor-text p {
+  margin: 0 0 18px;
+
   color: #aaa2a7;
 
-  font-size: 9px;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.mentor-text p:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -1500,6 +1406,336 @@ footer {
 
 
 /* =====================================================
+   WHATSAPP FLUTUANTE
+===================================================== */
+
+.whatsapp-floating {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 900;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #25d366;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.whatsapp-floating:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.45);
+}
+
+.whatsapp-floating svg {
+  width: 31px;
+  height: 31px;
+
+  fill: white;
+}
+
+
+/* =====================================================
+   APPLICATION POPUP
+===================================================== */
+
+.application-modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.application-modal.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+.application-backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(6, 5, 7, 0.84);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.application-dialog {
+  position: relative;
+  z-index: 2;
+
+  width: min(570px, 100%);
+
+  max-height: calc(100vh - 40px);
+
+  overflow-y: auto;
+
+  padding: 45px 45px 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      #302831,
+      #171318 55%
+    );
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.55);
+}
+
+.application-close {
+  position: absolute;
+
+  top: 16px;
+  right: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #d8d1d5;
+
+  cursor: pointer;
+
+  font-family: var(--sans);
+
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.application-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.application-logo {
+  width: fit-content;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.application-logo span {
+  display: block;
+
+  font-size: 6px;
+  letter-spacing: 0.22em;
+}
+
+.application-logo strong {
+  display: block;
+
+  margin-top: -3px;
+
+  font-family: var(--serif);
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.application-step-number {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #81797e;
+
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+.application-step h2,
+.application-success h2 {
+  max-width: 440px;
+
+  margin-bottom: 12px;
+
+  font-size: 34px;
+  line-height: 1.03;
+}
+
+.application-step > p,
+.application-success p {
+  max-width: 430px;
+
+  margin-bottom: 26px;
+
+  color: #9f979c;
+
+  font-size: 10px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #c9c1c5;
+
+  font-size: 8px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 14px;
+
+  outline: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  color: white;
+
+  font-size: 10px;
+
+  transition: border 0.2s ease;
+}
+
+.form-field input::placeholder {
+  color: #6f686d;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-field select {
+  appearance: none;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #8f878c 50%
+    ),
+    linear-gradient(
+      135deg,
+      #8f878c 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 18px) 19px,
+    calc(100% - 13px) 19px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+.form-field select option {
+  background: #171318;
+  color: white;
+}
+
+.application-submit {
+  width: 100%;
+
+  margin-top: 8px;
+}
+
+.application-success {
+  display: none;
+
+  padding: 35px 0;
+
+  text-align: center;
+}
+
+.application-success.is-active {
+  display: block;
+}
+
+.application-step.is-hidden {
+  display: none;
+}
+
+.success-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  font-size: 20px;
+}
+
+
+/* =====================================================
    TABLET
 ===================================================== */
 
@@ -1515,6 +1751,11 @@ footer {
 
   .sales-results img {
     height: 280px;
+  }
+
+  .mentor-row {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
   }
 
 }
@@ -1596,10 +1837,6 @@ footer {
   /* TOOLS */
 
   .tools-photo {
-    /*
-      Em mobile deixamos o container mais alto,
-      mostrando muito mais da foto vertical original.
-    */
     height: 520px;
   }
 
@@ -1648,8 +1885,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .bonus-image,
-  .crm-art {
+  .bonus-image {
     height: 280px;
   }
 
@@ -1695,22 +1931,36 @@ footer {
   }
 
 
-  /* MENTORS */
+  /* MENTORES */
 
-  .mentor-grid {
+  .mentor-row,
+  .mentor-row-reverse {
     grid-template-columns: 1fr;
 
-    gap: 60px;
+    gap: 25px;
+
+    margin-bottom: 60px;
   }
 
-  .mentor {
+  .mentor-row-reverse .mentor-photo,
+  .mentor-row-reverse .mentor-copy {
+    order: initial;
+  }
+
+  .mentor-photo {
     width: min(420px, 100%);
+
+    height: 500px;
 
     margin: 0 auto;
   }
 
-  .mentor-photo {
-    height: 430px;
+  .mentor-copy {
+    width: min(420px, 100%);
+
+    margin: 0 auto;
+
+    padding-top: 0;
   }
 
 
@@ -1722,6 +1972,29 @@ footer {
 
   .faq-heading {
     text-align: center;
+  }
+
+
+  /* WHATSAPP */
+
+  .whatsapp-floating {
+    right: 17px;
+    bottom: 17px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+
+  /* POPUP */
+
+  .application-dialog {
+    padding: 40px 24px 30px;
+  }
+
+  .application-step h2,
+  .application-success h2 {
+    font-size: 29px;
   }
 
 }
@@ -1739,7 +2012,6 @@ footer {
   .faq-layout {
     width: calc(100% - 32px);
   }
-
 
   .journey-card,
   .audience-card,
@@ -1804,521 +2076,10 @@ footer {
   }
 
 
-  /* CRM */
-
-  .crm-art {
-    padding: 18px;
-  }
-
-  .crm-columns {
-    gap: 3px;
-  }
-
-}
-
-
-/* =====================================================
-   AJUSTES FINAIS — OPERAÇÃO 50K
-   Mantém a base original e altera somente:
-   audience, CRM, mentores e pop-up.
-===================================================== */
-
-
-/* =====================================================
-   AUDIENCE FINAL — REPOSICIONAMENTO DA IMG_7029
-===================================================== */
-
-.audience-final {
-  width: min(850px, 100%);
-  margin: 52px auto 0;
-  grid-template-columns: minmax(0, 0.9fr) minmax(350px, 1.1fr);
-  align-items: center;
-  gap: 34px;
-}
-
-.audience-final-copy {
-  padding: 35px 0 55px;
-}
-
-.audience-final-copy h3 {
-  max-width: 390px;
-}
-
-.audience-photo {
-  align-self: end;
-  height: auto;
-  overflow: visible;
-}
-
-.audience-photo img {
-  width: 100%;
-  height: auto;
-  max-height: 610px;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
-
-/* =====================================================
-   CRM — DASHBOARD PREMIUM
-===================================================== */
-
-.crm-art {
-  height: 235px;
-  padding: 22px;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(255,255,255,0.09), transparent 38%),
-    linear-gradient(145deg, #302831 0%, #171318 72%);
-}
-
-.crm-dashboard {
-  width: 100%;
-  height: 100%;
-  padding: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.11);
-  border-radius: 7px;
-  background: #100d12;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.36);
-}
-
-.crm-dashboard-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding-bottom: 9px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-
-.crm-dashboard-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.crm-logo {
-  width: 27px;
-  height: 27px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 27px;
-  border-radius: 5px;
-  background: var(--cream);
-  color: var(--text-dark);
-  font-family: var(--serif);
-  font-size: 7px;
-}
-
-.crm-dashboard-brand strong,
-.crm-dashboard-brand small {
-  display: block;
-}
-
-.crm-dashboard-brand strong {
-  color: #eee8e4;
-  font-size: 6px;
-  font-weight: 500;
-}
-
-.crm-dashboard-brand small {
-  margin-top: 2px;
-  color: #756e72;
-  font-size: 4px;
-}
-
-.crm-dashboard-actions {
-  display: flex;
-  gap: 3px;
-}
-
-.crm-dashboard-actions i {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #665e63;
-}
-
-.crm-kpis {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-  padding: 9px 0 7px;
-}
-
-.crm-kpis > div {
-  min-width: 0;
-  padding: 6px 7px;
-  border: 1px solid rgba(255,255,255,0.055);
-  border-radius: 4px;
-  background: #1d191e;
-}
-
-.crm-kpis small {
-  display: block;
-  margin-bottom: 5px;
-  overflow: hidden;
-  color: #827a7f;
-  font-size: 3.5px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.crm-kpis span {
-  display: block;
-  width: 55%;
-  height: 4px;
-  border-radius: 99px;
-  background: #5e565c;
-}
-
-.crm-pipeline {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-}
-
-.crm-column {
-  min-width: 0;
-  padding: 6px;
-  border-radius: 4px;
-  background: #19151a;
-}
-
-.crm-column > strong {
-  display: block;
-  margin-bottom: 5px;
-  overflow: hidden;
-  color: #777075;
-  font-size: 3.4px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.crm-column article {
-  position: relative;
-  min-height: 25px;
-  margin-bottom: 4px;
-  padding: 5px 4px 4px 10px;
-  border: 1px solid rgba(255,255,255,0.045);
-  border-radius: 3px;
-  background: linear-gradient(145deg, #29232a, #211c22);
-}
-
-.crm-column article:last-child {
-  margin-bottom: 0;
-}
-
-.crm-column article i {
-  position: absolute;
-  top: 5px;
-  left: 4px;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #aaa2a7;
-}
-
-.crm-column article span {
-  display: block;
-  width: 75%;
-  height: 3px;
-  margin-bottom: 4px;
-  border-radius: 99px;
-  background: #514a4f;
-}
-
-.crm-column article span:last-child {
-  width: 48%;
-  margin-bottom: 0;
-  background: #393339;
-}
-
-
-/* =====================================================
-   MENTORES — VOLTA AO LAYOUT HORIZONTAL
-===================================================== */
-
-.mentor-grid {
-  width: min(850px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 70px;
-}
-
-.mentor {
-  width: 100%;
-  margin: 0;
-  display: grid;
-  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
-  align-items: center;
-  gap: 46px;
-}
-
-.mentor:nth-child(even) {
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
-}
-
-.mentor:nth-child(even) .mentor-photo {
-  grid-column: 2;
-  grid-row: 1 / span 4;
-}
-
-.mentor:nth-child(even) h3,
-.mentor:nth-child(even) p {
-  grid-column: 1;
-}
-
-.mentor-photo {
-  grid-row: 1 / span 4;
-  height: 430px;
-  margin: 0;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.mentor-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-}
-
-.mentor h3 {
-  margin: 0 0 17px;
-  font-size: 31px;
-}
-
-.mentor p {
-  margin-bottom: 13px;
-  color: #aaa2a7;
-  font-size: 9px;
-}
-
-
-/* =====================================================
-   POP-UP DE APLICAÇÃO
-===================================================== */
-
-body.application-modal-open {
-  overflow: hidden;
-}
-
-.application-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 0.22s ease,
-    visibility 0.22s ease;
-}
-
-.application-modal.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.application-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 6, 8, 0.82);
-  backdrop-filter: blur(7px);
-}
-
-.application-modal-dialog {
-  position: relative;
-  z-index: 1;
-  width: min(510px, 100%);
-  padding: 48px 46px 44px;
-  border: 1px solid rgba(255,255,255,0.11);
-  border-radius: 10px;
-  background:
-    radial-gradient(circle at 100% 0%, #342c35, transparent 42%),
-    #151216;
-  box-shadow: 0 30px 100px rgba(0,0,0,0.55);
-  text-align: center;
-  transform: translateY(14px) scale(0.985);
-  transition: transform 0.22s ease;
-}
-
-.application-modal.is-open .application-modal-dialog {
-  transform: translateY(0) scale(1);
-}
-
-.application-modal-close {
-  position: absolute;
-  top: 13px;
-  right: 16px;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #9e969b;
-  cursor: pointer;
-  font-family: var(--sans);
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.application-modal-close:hover {
-  color: var(--white);
-}
-
-.application-modal-brand {
-  margin: 0 auto 25px;
-}
-
-.application-modal-eyebrow {
-  display: block;
-  margin-bottom: 12px;
-  color: #91898e;
-  font-size: 7px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-}
-
-.application-modal h2 {
-  max-width: 410px;
-  margin: 0 auto 16px;
-  font-size: clamp(34px, 5vw, 46px);
-  line-height: 1;
-  letter-spacing: -0.035em;
-}
-
-.application-modal p {
-  max-width: 360px;
-  margin: 0 auto 25px;
-  color: #aaa2a7;
-  font-size: 10px;
-}
-
-.application-modal-button {
-  min-width: 230px;
-}
-
-
-/* =====================================================
-   RESPONSIVO DOS AJUSTES
-===================================================== */
-
-@media (max-width: 700px) {
-
-  .audience-final {
-    width: min(680px, 100%);
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
-    gap: 20px;
-  }
-
-  .audience-photo img {
-    max-height: 520px;
-  }
-
-  .mentor,
-  .mentor:nth-child(even) {
-    grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.15fr);
-    gap: 28px;
-  }
-
-  .mentor:nth-child(even) .mentor-photo {
-    grid-column: 2;
-  }
+  /* MENTOR */
 
   .mentor-photo {
-    height: 390px;
-  }
-
-  .crm-art {
-    height: 280px;
-    padding: 24px;
-  }
-
-}
-
-@media (max-width: 560px) {
-
-  .audience-final {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .audience-final-copy {
-    padding: 35px 5px 10px;
-  }
-
-  .audience-final-copy h3 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .audience-photo {
-    width: min(380px, 100%);
-    margin: 0 auto;
-  }
-
-  .audience-photo img {
-    max-height: none;
-  }
-
-  .mentor,
-  .mentor:nth-child(even) {
-    display: block;
-  }
-
-  .mentor-photo,
-  .mentor:nth-child(even) .mentor-photo {
-    height: auto;
-    margin-bottom: 25px;
-  }
-
-  .mentor-photo img {
-    height: auto;
-    max-height: 540px;
-    object-fit: cover;
-  }
-
-  .mentor h3,
-  .mentor p,
-  .mentor:nth-child(even) h3,
-  .mentor:nth-child(even) p {
-    grid-column: auto;
-  }
-
-  .application-modal {
-    padding: 16px;
-  }
-
-  .application-modal-dialog {
-    padding: 43px 24px 34px;
-  }
-
-  .application-modal-button {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .crm-art {
-    height: 255px;
-    padding: 14px;
-  }
-
-  .crm-dashboard {
-    padding: 9px;
+    height: 440px;
   }
 
 }
