@@ -899,41 +899,53 @@
 
           <div class="crm-art">
 
-            <div class="crm-browser">
+            <div class="crm-dashboard">
 
-              <div class="crm-top">
+              <div class="crm-dashboard-top">
+                <div class="crm-dashboard-brand">
+                  <span class="crm-logo">O50K</span>
+                  <div>
+                    <strong>CRM Operação 50K</strong>
+                    <small>Pipeline comercial</small>
+                  </div>
+                </div>
 
-                <span></span>
-                <span></span>
-                <span></span>
-
+                <div class="crm-dashboard-actions">
+                  <i></i><i></i><i></i>
+                </div>
               </div>
 
+              <div class="crm-kpis">
+                <div><small>LEADS</small><span></span></div>
+                <div><small>AGENDADOS</small><span></span></div>
+                <div><small>AVALIAÇÕES</small><span></span></div>
+                <div><small>FECHAMENTOS</small><span></span></div>
+              </div>
 
-              <div class="crm-columns">
+              <div class="crm-pipeline">
 
-                <div>
-                  <small>LEADS</small>
-                  <i></i>
-                  <i></i>
-                  <i></i>
+                <div class="crm-column">
+                  <strong>NOVOS LEADS</strong>
+                  <article><i></i><span></span><span></span></article>
+                  <article><i></i><span></span><span></span></article>
+                  <article><i></i><span></span><span></span></article>
                 </div>
 
-                <div>
-                  <small>AGENDADOS</small>
-                  <i></i>
-                  <i></i>
+                <div class="crm-column">
+                  <strong>CONTATO</strong>
+                  <article><i></i><span></span><span></span></article>
+                  <article><i></i><span></span><span></span></article>
                 </div>
 
-                <div>
-                  <small>AVALIAÇÕES</small>
-                  <i></i>
-                  <i></i>
+                <div class="crm-column">
+                  <strong>AVALIAÇÃO</strong>
+                  <article><i></i><span></span><span></span></article>
+                  <article><i></i><span></span><span></span></article>
                 </div>
 
-                <div>
-                  <small>FECHAMENTOS</small>
-                  <i></i>
+                <div class="crm-column">
+                  <strong>FECHAMENTO</strong>
+                  <article><i></i><span></span><span></span></article>
                 </div>
 
               </div>
@@ -1296,12 +1308,6 @@
             >
 
           </div>
-
-
-          <span>
-            PRODUTO
-          </span>
-
           <h3>
             Dra. Larissa Bulhões
           </h3>
@@ -1342,12 +1348,6 @@
             >
 
           </div>
-
-
-          <span>
-            POSICIONAMENTO • AQUISIÇÃO • COMERCIAL
-          </span>
-
           <h3>
             Lucas Bulhões
           </h3>
@@ -1563,6 +1563,61 @@
 
   </footer>
 
+
+
+  <!-- =====================================================
+       POP-UP DE APLICAÇÃO
+  ====================================================== -->
+
+  <div class="application-modal" id="application-modal" aria-hidden="true">
+
+    <div class="application-modal-backdrop" data-close-application></div>
+
+    <div
+      class="application-modal-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="application-modal-title"
+    >
+
+      <button
+        type="button"
+        class="application-modal-close"
+        aria-label="Fechar"
+        data-close-application
+      >
+        ×
+      </button>
+
+      <div class="brand application-modal-brand">
+        <span>OPERAÇÃO</span>
+        <strong>50K</strong>
+      </div>
+
+      <span class="application-modal-eyebrow">
+        EXCLUSIVO PARA DENTISTAS
+      </span>
+
+      <h2 id="application-modal-title">
+        Faça a sua aplicação para a
+        <em>Operação 50K.</em>
+      </h2>
+
+      <p>
+        Você será direcionado para a aplicação.
+        Depois do envio, aguarde nosso time entrar em contato.
+      </p>
+
+      <a
+        href="SEU-LINK-DE-APLICACAO-AQUI"
+        class="button button-light application-modal-button"
+      >
+        CONTINUAR PARA A APLICAÇÃO
+      </a>
+
+    </div>
+
+  </div>
 
   <script src="./script.js"></script>
 
