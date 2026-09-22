@@ -1,29 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  /*
-  ==========================================================
-  ACCORDIONS
-  ==========================================================
-  Mantém apenas um item aberto por grupo.
-  */
+  // =====================================================
+  // ACCORDIONS
+  // =====================================================
 
   const accordionGroups = document.querySelectorAll(
     ".accordion-grid, .structure-list, .methods-list, .faq-list"
   );
 
-  accordionGroups.forEach(function (group) {
+  accordionGroups.forEach((group) => {
 
     const items = group.querySelectorAll("details");
 
-    items.forEach(function (item) {
+    items.forEach((item) => {
 
-      item.addEventListener("toggle", function () {
+      item.addEventListener("toggle", () => {
 
         if (!item.open) {
           return;
         }
 
-        items.forEach(function (otherItem) {
+        items.forEach((otherItem) => {
 
           if (otherItem !== item) {
             otherItem.open = false;
@@ -38,39 +35,309 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  /*
-  ==========================================================
-  SCROLL SUAVE
-  ==========================================================
-  */
+  // =====================================================
+  // POPUP DE APLICAÇÃO
+  // =====================================================
 
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
+  const modal = document.getElementById("applicationModal");
 
-  internalLinks.forEach(function (link) {
+  const openButtons = document.querySelectorAll(
+    ".js-open-application"
+  );
 
-    link.addEventListener("click", function (event) {
+  const closeButtons = document.querySelectorAll(
+    ".js-close-application"
+  );
 
-      const targetId = link.getAttribute("href");
+  const applicationForm = document.getElementById(
+    "applicationForm"
+  );
 
-      if (!targetId || targetId === "#") {
-        return;
+  const applicationStep = document.querySelector(
+    ".application-step"
+  );
+
+  const applicationSuccess = document.getElementById(
+    "applicationSuccess"
+  );
+
+
+  function openApplicationModal() {
+
+    if (!modal) {
+      return;
+    }
+
+    modal.classList.add("is-open");
+
+    modal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+    document.body.classList.add(
+      "modal-open"
+    );
+
+
+    window.setTimeout(() => {
+
+      const firstInput = modal.querySelector(
+        "input"
+      );
+
+      if (firstInput) {
+        firstInput.focus();
       }
 
-      const target = document.querySelector(targetId);
+    }, 150);
 
-      if (!target) {
-        return;
-      }
+  }
 
-      event.preventDefault();
 
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+  function closeApplicationModal() {
 
-    });
+    if (!modal) {
+      return;
+    }
+
+    modal.classList.remove(
+      "is-open"
+    );
+
+    modal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    document.body.classList.remove(
+      "modal-open"
+    );
+
+  }
+
+
+  openButtons.forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      openApplicationModal
+    );
 
   });
+
+
+  closeButtons.forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      closeApplicationModal
+    );
+
+  });
+
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (
+        event.key === "Escape" &&
+        modal &&
+        modal.classList.contains("is-open")
+      ) {
+
+        closeApplicationModal();
+
+      }
+
+    }
+  );
+
+
+  // =====================================================
+  // MÁSCARA DO WHATSAPP
+  // =====================================================
+
+  const phoneInput = document.getElementById(
+    "telefone"
+  );
+
+  if (phoneInput) {
+
+    phoneInput.addEventListener(
+      "input",
+      (event) => {
+
+        let value = event.target.value.replace(
+          /\D/g,
+          ""
+        );
+
+        value = value.substring(
+          0,
+          11
+        );
+
+
+        if (value.length > 10) {
+
+          value = value.replace(
+            /^(\d{2})(\d{5})(\d{4})$/,
+            "($1) $2-$3"
+          );
+
+        } else if (value.length > 6) {
+
+          value = value.replace(
+            /^(\d{2})(\d{4})(\d{0,4})$/,
+            "($1) $2-$3"
+          );
+
+        } else if (value.length > 2) {
+
+          value = value.replace(
+            /^(\d{2})(\d+)/,
+            "($1) $2"
+          );
+
+        } else if (value.length > 0) {
+
+          value = value.replace(
+            /^(\d*)/,
+            "($1"
+          );
+
+        }
+
+
+        event.target.value = value;
+
+      }
+    );
+
+  }
+
+
+  // =====================================================
+  // ENVIO DO FORMULÁRIO
+  //
+  // IMPORTANTE:
+  // Neste momento ele controla o comportamento visual.
+  // Quando conectarmos ao CRM / GHL, a integração entra aqui.
+  // =====================================================
+
+  if (applicationForm) {
+
+    applicationForm.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+
+        if (!applicationForm.checkValidity()) {
+
+          applicationForm.reportValidity();
+
+          return;
+
+        }
+
+
+        const formData = new FormData(
+          applicationForm
+        );
+
+
+        const applicationData = {
+
+          nome:
+            formData.get("nome"),
+
+          telefone:
+            formData.get("telefone"),
+
+          instagram:
+            formData.get("instagram"),
+
+          faturamento:
+            formData.get("faturamento"),
+
+          lentes:
+            formData.get("lentes")
+
+        };
+
+
+        console.log(
+          "Aplicação Operação 50K:",
+          applicationData
+        );
+
+
+        if (applicationStep) {
+
+          applicationStep.classList.add(
+            "is-hidden"
+          );
+
+        }
+
+
+        if (applicationSuccess) {
+
+          applicationSuccess.classList.add(
+            "is-active"
+          );
+
+        }
+
+
+        applicationForm.reset();
+
+      }
+    );
+
+  }
+
+
+  // =====================================================
+  // RESET DO POPUP APÓS FECHAR
+  // =====================================================
+
+  if (modal) {
+
+    modal.addEventListener(
+      "transitionend",
+      () => {
+
+        if (
+          !modal.classList.contains("is-open")
+        ) {
+
+          if (applicationStep) {
+
+            applicationStep.classList.remove(
+              "is-hidden"
+            );
+
+          }
+
+
+          if (applicationSuccess) {
+
+            applicationSuccess.classList.remove(
+              "is-active"
+            );
+
+          }
+
+        }
+
+      }
+    );
+
+  }
 
 });
